@@ -1,0 +1,233 @@
+\section{Auswertung}
+\subsection{Wheatstonesche Brücke}
+Die gesuchten Widerstände $R_3$ und $R_4$ werden mehrfach durch Variation von $R_2$ gemessen. Der erste unbekannte
+Widerstand $R_{11}$ berechnet sich nach (). 
+\begin{table}
+  \centering
+  \caption{Messung von $R_3$ und $R_4$} 
+  \sisetup{table-format=1.2}
+  \begin{tabular}{S[table-format=3.0] S S S S S[table-format=3.2]}
+  \toprule
+  {$R_2 \text{[$\Omega$]}$} & {$R_3 \text{in Skalenanteilen}$} & {$R_3 \text{[$\Omega$]}$} & {$R_4 \text{[$\Omega$]}$} & {$R_{11} \text{[$\Omega$]}$} \\
+  \midrule
+  500 & 496 & 494,52 & 505,48 & 489,16 \\
+  664 & 425 & 423,73 & 576,27 & 488,24 \\
+  1000 & 329 & 328,02 & 671,98 & 488,14 \\
+  \bottomrule
+  \end{tabular}
+  \end{table}
+\label{ssec:wheat}
+Genau wie in \ref{ssec:wheat} wird $R_2$ variiert und $R_3$ und $R_4$ gemsssen. Nun wird der zweite unbekannte Widerstand
+$R_{10}$ berechnet nach (). \\
+\begin{table}
+  \centering
+  \caption{Messung von $R_3$ und $R_4$} 
+  \sisetup{table-format=1.2}
+  \begin{tabular}{S[table-format=3.0] S S S S S[table-format=3.2]}
+  \toprule
+  {$R_2 \text{[$\Omega$]}$} & {$R_{3} \text{in Skalenanteilen}$} & {$R_3 \text{[$\Omega$]}$} & {$R_4 \text{[$\Omega$]}$} & {$R_{11} \text{[$\Omega$]}$} \\ %Zeile mit Überschriften
+  \midrule
+  500 & 325 & 324,03 & 675,97 & 239,68 \\
+  664 & 266 & 264,20 & 735,80 &u 238,42 \\
+  1000 & 194 & 193,42 & 806,58 & 239,80 \\
+  \bottomrule
+  \end{tabular}
+  \end{table} \\
+Zur Ermittlung der gesuchten Widerstände $R_3$ und $R_4$ werden die Messdaten gemittelt
+und die Standardabweichung mit Python berechnet. Nun kann nach (),(),() berechnet werden.
+Die Werte von $R_{11}$ und $R_{10}$ werden mit Python gemittelt und die Standardabweichung berechnet:
+\begin{align*}
+    R_{11} = (488,51 \pm 0,5623) \\ %\sigma = 0,3246
+    R_{10} = (420,46 \pm 2,2640) \,. %\sigma  = 1,3071
+\end{align*}
+Außerdem werden die Fehler nach Gauss´scher Fehlerfortpflanzung berechnet.
+Nach Herstellerangaben beläuft sich der unsystematische relative Fehler aller
+Referenzbauteile auf $\pm 0,2 \%$ und der Quotient $\frac{R_3}{R_4}$ zeigt eine
+unsystematische Abweichung bis zu $r_{\frac{R_3}{R_4}} = \pm 0,5 \%$.
+Somit lässt sich der Gauss´scher Fehler berechnen:
+\begin{align*}
+    r_{Gauss} & = \sqrt{{r_{R_2}}^2 + r_{\frac{R_3}{R_4}}^2} \\
+    \sigma_{Gauss} & = \bar{x} \cdot r_{Gauss} \,.
+\end{align*}
+Damit ergibt sich für $R_{11}$
+\begin{align*}
+  R_{11} = (0,54 \pm 2,85) \\
+  R_{10} = (0,54 \pm 2,66) \,.
+\end{align*}
+\label{sec:abschnitt}
+\subsection{Kapazitätsmessbrücke}
+Die Kapazität $C_2$ wird nun zweifach variiert. $C_{1}$ und $C_{3}$ werden nach Gleichung () berechnet.
+\begin{table}
+  \centering
+  \caption{Messung von $C_1$} 
+  \label{tab:some_data}
+  \sisetup{table-format=1.2}
+  \begin{tabular}{S[table-format=3.0] S S S S S[table-format=3.2]}
+  \toprule
+  {$C_2 in \text{[nF]}$} & {$R_3 \text{in Skalenanteilen }$} & {$R_3 \text{[$\Omega$]}$} & {$R_4 \text{[$\Omega$]}$} & {$C_1 in \text{[nF]}$} \\ %Zeile mit Überschriften
+  \midrule
+  597 & 487 & 485,54 & 514,46 & 632,56 \\
+  994 & 602 & 600,20 & 399,80 & 662,11 \\
+  450 & 406 & 404,79 & 595,21 & 661,69 \\
+  \bottomrule
+  \end{tabular}
+  \end{table}
+  \begin{table}
+    \centering
+    \caption{Messung von $C_4$ } 
+    \label{tab:some_data}
+    \sisetup{table-format=1.2}
+    \begin{tabular}{S[table-format=3.0] S S S S[table-format=3.2]}
+    \toprule
+    {$C_2 \text{[nF]}$} & {$R_3 \text{in Skalenanteilen}$} & {$R_3 \text{[$\Omega$]}$} & {$R_4 \text{[$\Omega$]}$} & {$C_3 \text{[nF]}$} \\ %Zeile mit Überschriften
+    \midrule
+    597 & 590 & 588,24 & 411,76 & 417,89 \\
+    994 & 704 & 701,90 & 298,10 & 422,16 \\
+    450 & 518 & 516,45 & 483,55 & 421,33 \\
+    \bottomrule
+    \end{tabular}
+    \end{table}
+Wie bei \ref{sec:abschnitt} wird der Mittelwert und die Standardabweichung berechnet.
+\begin{align*}
+  C_1= (652,12 \pm 16,94) \\ %\sigma = 9,7803
+  C_3= (420,46 \pm 2,26)\,. %\sigma= 1,3048
+\end{align*}
+Bei der Gauss´schen Fehlerfortpflanzung gilt für $X$:
+\begin{align*}
+  C: r_{Gauss} = \sqrt{r_{C_2}^2 + r_{\frac{R_4}{R_3}^2}} \,.
+\end{align*}
+So ergibt es sich zu (mit $r_{R_2} = \pm 3\%$):
+\begin{align*}
+  C_1 = (0,54 \pm 3,52) \\
+  C_3 = (0,54 \pm 2,27)\,.
+\end{align*}
+\subsection{Induktivitätsmessbrücke}
+Der Widerstand $R_4$ ergibt sich aus der Differenz des Gesamtwidersatndes mit $R_3$ und $R_{17}$ werden nach Gleichungen
+() und () berechnet. Die Induktivität und Verlustwiderstand wird in der Tabelle aufgelistet.
+\begin{table}
+  \centering
+  \caption{Messung $L_x$ und $R_x$} %Titel der tabelle
+  \label{tab:some_data}
+  \sisetup{table-format=1.2} 
+  \begin{tabular}{S[table-format=3.0] S S S S S S S S[table-format=3.2]}
+  \toprule
+  {$L_2 \text{[mH]}$} & {$R_2 \text{in Skalenanteilen}$} & {$R_2 \text{[$\Omega$]}$} & {$R_3 \text{in Skalenanteilen}$} & {$R_3 \text{[$\Omega$]}$} & {$R_4 \text{[$\Omega$]}$}  & {$R_{19} \text{[$\Omega$]}$} & {$L_{17} \text{[mH]}$}\\ %Zeile mit Überschriften
+  \midrule
+  27,5 & 56 & 55,89 & 608 & 606,18 & 393,82 & 55,89 & 42,32 \\
+  \bottomrule
+  \end{tabular}
+  \end{table}
+Für den Gauss´schen Fehler gilt:
+\begin{align*}
+  L: r_{Gauss} = \sqrt{{r_{L_2}}^2 + {r_{\frac{L_2}{R_4}}^2}} \\
+  R: r_{Gauss} = \sqrt{{r_{L_2}}^2 + {r_{\frac{R_3}{R_4}}^2}} \,.
+\end{align*}
+(mit $r_{R_2}=3\%$, $\frac{R_3}{R_4} = 0,5\%$, $r = 0,2 \%$ ) %Gaußfehler fehlt!
+Daraus ergibt sich der Gauss-Fehler:
+\begin{align*}
+  L = 0,54 \\
+  R = 3,04 \,.
+\end{align*}
+\subsection{Induktivitätsmessung mittels Maxwell - Brücke}
+Die Induktivität und der Verlustwiderstand werden nach Gleichungen () und () berechnet
+\begin{table}
+  \centering 
+  \caption{Messung in $L_{17}$ und $R_x$} %Titel der tabelle
+  \label{tab:some_data}
+  \sisetup{table-format=1.2}
+  \begin{tabular}{S[table-format=3.0] S S S S S S S S[table-format=3.2]}
+  \toprule
+  {$C_4 \text{[nF]}$} & {$R_2 \text{[$\Omega$]}$} & {$R_3 \text{in Skalenanteilen}$} & {$R_3 \text{[$\Omega$]}$} & {$R_4 \text{in Skalenanteilen}$} & {$R_4 \text{[$\Omega$]}$}  & {$R_{17} \text{[]$\Omega$]}$} & {$L_{17} \text{[mH]}$}\\ 
+  \midrule
+  597 & 1000 & 74 & 73,78 & 793 & 791,42 & 93,22 & 44,05 \\
+  \bottomrule
+  \end{tabular}
+  \end{table}
+Der Gauss´scher Fehler wird wie folgt berechnet:
+\begin{align*}
+  L: r_{Gauss} = \sqrt{{r_{R_2}}^2 + {r_{R_3}}^2 + {r_{C_4}^2}} \\
+  R: r_{Gauss} = \sqrt{{r_{R_2}}^2 + {r_{R_3}}^2 + {r_{R_4}^2}} \,.
+\end{align*}
+Es ergibt:
+\begin{align*}
+  L = 3,0133 \\
+  R = 4,25 \,.
+\end{align*}
+\subsection{Wien-Robinson-Brücke}
+Die Brückenspannung $U_{Br}$ wird bei unterschiedlichen Frequenzen $f$ gemessen. Die Widerstände
+der Bauteile sind der folgenden Tabelle zu entnehmen.
+\begin{table}
+  \centering
+  \caption{Bauteile der Wien-Robinson-Brücke} %Titel der tabelle
+  \label{tab:some_data}
+  \sisetup{table-format=1.2}
+  \begin{tabular}{S[table-format=3.0] S S S S[table-format=3.2]}
+  \toprule
+  {$2R’ \text{[$\Omega$]}$} & {$R’\text{[$\Omega$]}$} & {$C_?\text{[nF]}$} & {$R\text{[$\Omega$]}$} \\ %Zeile mit Überschriften
+  \midrule
+  1000 & 500 & 992 & 1000 \\
+  \bottomrule
+  \end{tabular}
+  \end{table}
+%Frequenzwerte schreiben kleiner gleich
+  \begin{table}
+    \centering
+    \caption{Messwerte der Wien-Robinson-Brücke} %Titel der tabelle
+    \label{tab:some_data}
+    \sisetup{table-format=1.2}
+    \begin{tabular}{S[table-format=3.0] S S S S S S S S [table-format=3.2]}
+    \toprule
+    {Frequenz $f$ [Hz]} & {$U_{Br}$ [V]} & {$U_S$ [V]} & {$\omega = 2 \pi fRC$} & {$\Omega = \frac{f}{f_0}$} & {$\frac{U_{Br}}{U_S}$} & {nach Gleichung ()} \\ %letzte nach ()
+    \midrule
+    160 & 0,043 & 2,5 & 0,9973 & 1,0000 & 0,0172 & 0 \\
+    50 & 0,6 & 2,6 & 0,3116 & 0,3125 & 0,2308 & 0,2312 \\
+    60 & 0,53 & 2,6 & 0,374 & 0,375 & 0,2308 & 0,2023 \\
+    80 & 0,4 & 2,6 & 0,4986 & 0,5 & 0,1538 & 0,1491 \\
+    100 & 0,26 & 2,6 & 0,6233 & 0,625 & 0,1 & 0,1030 \\
+    120 & 0,17 & 2,6 & 0,748 & 0,75 & 0,0654 & 0,0636 \\
+    125 & 0,16 & 2,6 & 0,7791 & 0,7813 & 0,0615 & 0,05467 \\
+    130 & 0,14 & 2,6 & 0,8103 & 0,8125 & 0,0538 & 0,0460 \\
+    135 & 0,093 & 2,6 & 0,8414 & 0,8438 & 0,0358 & 0,0377 \\
+    140 & 0,074 & 2,6 & 0,8726 & 0,875 & 0,0285 & 0,0296 \\
+    145 & 0,06 & 2,6 & 0,9038 & 0,9063 & 0,0231 & 0,02185 \\
+    150 & 0,042 & 2,6 & 0,953 & 0,9375 & 0,0162 & 0,0143 \\
+    165 & 0,05 & 2,6 & 1,0284 & 1,0313 & 0,0192 & 0,0068 \\
+    170 & 0,059 & 2,6 & 1,0596 & 1,0625 & 0,0227 & 0,0135 \\
+    175 & 0,067 & 2,6 & 1,0908 & 1,0938 & 0,0258 & 0,02 \\
+    180 & 0,078 & 2,6 & 1,1219 & 1,125 & 0,03 & 0,02615 \\
+    185 & 0,089 & 2,6 & 1,1531 & 1,5625 & 0,0342 & 0,097 \\
+    190 & 0,11 & 2,6 & 1,1843 & 1,175 & 0,0423 & 0,0381 \\
+    200 & 0,14 & 2,6 & 1,2467 & 1,25 & 0,0538 & 0,0494 \\
+    220 & 0,18 & 2,6 & 1,3712 & 1,375 & 0,0692 & 0,0704 \\
+    250 & 0,25 & 2,6 & 1,5582 & 1,5625 & 0,0962 & 0,9797 \\
+    300 & 0,27 & 2,6 & 1,8699 & 1,875 & 0,1038 & 0,1361 \\
+    350 & 0,39 & 2,6 & 2,1815 & 2,1875 & 0,15 & 0,1665 \\
+    400 & 0,45 & 2,6 & 2,4932 & 2,5 & 0,1731 & 0,1912 \\
+    500 & 0,53 & 2,5 & 3,1165 & 3,125 & 0,212 & 0,2277 \\
+    700 & 0,64 & 2,5 & 4,3630 & 4,375 & 0,256 & 0,2701 \\
+    1000 & 0,7 & 2,5 & 6,2329 & 6,25 & 0,28 & 0,2990 \\
+    2000 & 0,79 & 2,5 & 12,4658 & 12,5 & 0,316 & 0,3240 \\
+    3000 & 0,81 & 2,6 & 18,6988 & 18,75 & 0,3115 & 0,3291 \\
+    10000 & 0,8 & 2,6 & 62,3292 & 62,5 & 0,3077 & 0,3329 \\
+
+    \bottomrule
+    \end{tabular}
+    \end{table}
+
+\subsection{Klirrfaktormessung}
+Der Klirrfaktor wird durch die Messergebnisse der Wien-Robinson-Brücke bestimmt nach Gleichung ().
+Der Klirrfaktor ist also der Quotient aus der Wurzel aus der Summe der Amplitudenquadrate 
+aller Oberwellen und der Amplitude der Grundwelle. Die Amplitude der Grundwelle ($\Omega = 1$)
+ist in diesem Fall $U_1 = 2,5$ V. Die zweite Oberwelle ($\Omega = 2 $) lässt sich berechnen nach
+\begin{align}  
+  U_2 = \frac{U_{Br} (1)}{\sqrt{\frac{1}{9}\frac{(2^2-1)^2}{(1-2^2)^2+9 \cdot 2^2}}} \,.
+\end{align}
+Die Amplitude der Oberwelle der Brückenschaltung ist bekannt, aber die Amplitude
+der Oberwelle des Sinusgenerators wird aber noch benötigt. Es ergibt sich der
+Klirrfaktor:
+\begin{align*}
+  k \approx 0,1153 = \,.
+\end{align*}
+
+
+  \label{sec:Auswertung}

@@ -1,0 +1,522 @@
+\documentclass[a4paper, 10pt]{report}%%{scrartcl} %%Das Deutsche Layout für article
+
+\usepackage{ngerman}            %% Benutze Deutsche Trennregeln
+\usepackage[normalem]{ulem}
+\usepackage[intlimits]{amsmath} %% Erweiterte Matheumgebung
+\usepackage{amssymb}            %% Ereiterte  Mathezeichensätze
+%%\usepackage{wasysym,oldgerm,bbm,enumerate}
+\usepackage{color}              %% Ermöglicht die nutzung von Farbigem Text
+\usepackage[ansinew]{inputenc}  %% Ermöglicht die eingage von Umlauten und des ß
+\usepackage{fancyhdr}           %%
+\usepackage{lastpage}
+\usepackage[final]{graphicx}    %% Ermöglicht die Einbindung von Grafiken. Optionen: draft <> final
+\usepackage[bookmarksnumbered]{hyperref}     %% Ermöglicht Hyperlinks
+%%\usepackage{wrapfig}            %% Ermöglicht den Umfluss von Text um Grafiken
+\usepackage{units}              %% Setzt SI Einheiten korrekt
+\usepackage[T1,OT1]{fontenc}
+\usepackage{multicol}
+\usepackage[german]{varioref}
+\usepackage{tabularx}
+\usepackage[ngerman]{babel}
+\usepackage{fancybox}
+\usepackage[squaren]{SIunits}
+\usepackage{theorem}
+\usepackage{geometry}
+\usepackage{relsize}
+\usepackage{graphicx}
+\author{Sebastian Rollke (103095)\,\, und Daniel Brenner (105292)}
+\title{Physik - Anfängerpraktikum \\ Versuch 406 - Beugung am Spalt}
+\begin{document}
+	\maketitle
+	\tableofcontents
+
+\chapter{Einleitung}
+Betrachtet man, das Verhalten des Lichtes wenn dieses auf Objekte, die klein gegen den klassischen Strahldurchmesser sind, beobachtet man Abweichungen von der gemoetrischen Optik.\\
+Es kommt zu den sog. Beugungsphänomenen, die nun in diesem Versuch genauer untersucht werden sollen. 
+
+\section{Zielsetzung}
+
+Ziel dieses Versuches soll sein, die Funktion I($\varphi$) als Intensität des Lichtes in Abhängigkeit von der Ausbreitungsrichtung zu bestimmen. Die Messung erfolgt an zwei einfachen Spalten und einem Doppelspalt. Aus dieser Intensitätsverteilung kann durch eine Fourier-Transformation rückgeschlossen werden auf die Gestalt der beugenden Figur. Außerdem sollen die Abmessungen der Spalten zudem in einer seperaten Messung mit dem Mikroskop ermittelt werden. 
+\chapter{Theoretische Betrachtung}
+Man unterscheidet zwei Arten von Beugung, die Fresnelsche und die Frauenhofersche Lichtbegung. Die Fresnelsche Lichtbeugung beschreibt eine Anordnung, bei der Lichtquelle und Beobachtungspunkt jeweils im Endlichen zu finden sind. Dies hat zur Konsequenz, das die Strahlen, die im Beobachtungspunkt P interferieren jeweils unter verschiedenen Winkeln gebeugt werden (siehe Abbildung 2.1)
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[scale = 0.8]{1}
+	\end{center}
+	\caption{Fresnelsche und Frauenhofersche Beugung an einem Spalt (Die gestrichelten Linien deuten den Strahlenverlauf bei der geometrischen Optik an)}
+	\label{fig:abbildung1}
+\end{figure}
+Die Frauenhofersche Lichtbeugung hingegen geht von einer Lichtquelle mit unendlichen Abstand von der Beugungsebene aus, so das hier ein paralleles Lichtbündel mit einer ebenen Wellenfront vorhanden ist. Experimentell wird dies durch die Verwendung eines Lasers realisiert. Dies hat zur Folge, das alle Strahlen die im Beobachtungspunkt P ankommen und dort interferieren, unter dem selben Winkel gebeugt wurden und so natürlich die mathematische Betrachtung drastisch Vereinfacht. Im Folgenden soll also nur noch die Frauenhofersche Lichtbeugung zur Lösung des Problemes herangezogen werden. Hierbei sollte der Spalt zudem noch eine große Länge gegen seine Breite aufweisen um nur eine Begrenzung in eine Dimension zuzulassen und so die Beugungserscheinungen auf eine Dimension beschränken.\\
+Um die Beugungserscheinungen zu erklären, nutzt man eine eine Kombination aus dem Huygenschen Prinzip, das besagt das jeder Punkt einer Wellenfront Ursprung einer neuen Elementarwelle ist und dem Interferenzprinzip nach Fresnel, nach dem Wellen miteinander interferieren und eine neue Wellenfront bilden welche der Einhüllenden der Elemetarwellen entspricht. 
+\section{Beugung am Einzelspalt}
+Zunächst greift man zwei Strahlenbündel heraus, die von zwei verschiedenen Punkten mit dem Abstand x am Spalt ausgehen. Durch ihren Gangunterschid s kommt es zu einer Phasendifferenz von $\delta$:
+\begin{eqnarray}
+\delta = \frac{2\pi s}{\lambda} = \frac{2 \pi x \sin\varphi}{\lambda}
+\end{eqnarray}
+mit der Wellenlänge des Lichtes $\lambda$. Durch Integration über die Breite des Spaltes b von
+\begin{eqnarray}
+B(z,t,\varphi) = A_0 \int\limits_0^b \exp\left\{i\left(\omega t - \frac{2 \pi z}{\lambda} + \delta\right)\right\}dx
+\end{eqnarray}
+($A_0$ ist die Amplitude der einfallenden Welle, z die Wellenausbreitungsrichtung, $\omega$ die Frequenz und t als Zeit) und Vernachlässigung unbedeutender Phasenfunktionen folgt schließlich 
+\begin{eqnarray}
+B(\varphi) = A_0b\frac{sin\eta}{\eta}
+\end{eqnarray}
+mit der Abkürzung
+\begin{eqnarray}
+\nonumber
+\eta := \frac{\pi b \sin\varphi}{\lambda}
+\end{eqnarray}
+Aufgrund der hohen Lichtfrequenz von $\omega$ = $10^{14}$ bis $10^{15}$ Hz sind die Amplituden der Lichtwelle nicht direkt messbar. Die zeitlich gemittelte Intensität hingegen ist experimentell zugänglich, sie proportional zum Quadrat der Amplitudenfunktion. 
+\begin{eqnarray}
+I(\varphi) \propto B(\varphi)^2 = {A_0}^2 b^2 \left(
+\frac{\lambda}{\pi b \sin (\varphi)} \right)^2 \sin^2 \left(
+\frac{\pi b \sin (\varphi)}{\lambda} \right) \makebox[1cm]{.}
+\end{eqnarray}
+\section{Beugung am Doppelspalt}
+Die Beugung am Doppelspalt lässt sich in Analogie als Überlagerung zweier Einfach-Spalte der Breite b im Abstand s beschreiben. 
+\begin{eqnarray}
+I(\varphi) \propto B(\varphi)^2 = 4 {A_0}^2 b^2 \cos^2 \left(
+\frac{\pi s \sin (\varphi)}{\lambda} \right)  \left(
+\frac{\lambda}{\pi b \sin (\varphi)} \right)^2 \sin^2 \left(
+\frac{\pi b \sin (\varphi)}{\lambda} \right)
+\end{eqnarray}
+Da sich die Intensitätsverteilung des Doppelspaltes aus der Intensitätsverteilung des Einfachspaltes und einer $cos^2$-Verteilung zusammensetzt beobachtet man zusätzliche Minima an den Nullstellen der $cos^2$-Verteilung. 
+\section{Frauenhofersche Beugung und Fourier-Transformation}
+Die Funktion B($\varphi$) lässt sich als Fourier-Transformierte der Amplitudenverteilung der einfallenden Welle in der Beugungsebene (Aperturfunktion) ausdrücken. Allgemein versteht man unter einer Fouriertransformation der Funktion f(x):
+\begin{eqnarray}
+g(\xi) := \int\limits_{-\infty}^{+\infty}f(x)e^{ix\xi}dx
+\end{eqnarray}
+Am Spalt lässt sich die Aperturfunktion f(x) als f(x) = $A_0$ darstellen und durch einsetzen und Anwendung der Eulerschen Formel ergibt sich
+\begin{eqnarray}
+g(\xi) = \frac{2A_0}{\xi}\exp\left(\frac{i\xi b}{2}\right)\sin\left(\frac{\xi b}{2}\right)
+\end{eqnarray}
+setzt man nun
+\begin{eqnarray}
+\xi := \frac{2\pi\sin\varphi}{\lambda}
+\end{eqnarray}
+ein, so sieht man das die Fourier-Transformation das Huygensche Prinzip mathematisch beschreibt. Vor allem sei zu beachten, das durch die Umkehrbarkeit der Fourier-Transformation aus der Amplitudenfunktion die Gestalt f(x) des beugenden Objektes berechnet werden kann. 
+\chapter{Experimentelles Vorgehen}
+\section{Messung der Beugungsfigur eines Spaltes}
+Zur Aufnahme der Beugungsfiguren der beiden Einfach- und des Doppelspaltes nutzt man jeweils einen Aufbau nach Abbildung 3.1
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[scale = 0.7]{2}
+	\end{center}
+	\caption{Versuchsanordnung zur Ausmessung einer Beugungsfigur}
+	\label{fig:abbildung2}
+\end{figure}
+Als Lichtquelle dient ein Helium-Neon-laser mit einer Wellenlänge von 633nm. Zur Mesung der Intensitäten wird eine Photodiode genutzt, die einen zur Intensität proportionale Strom erzeugt. Dieser betragsmäßig sehr geringe Strom wird durch ein Amperemeter gemessen.Zu beachten ist hier noch, dass auch die unbelichtete Photodiode einen gewissen Dunkelstrom abgibt.\\
+Die Photodiode kann nun durch eine Mikrometerschraube auf einer Schiene verschoben werden, um die Intensität in Abhängigkeit vom Ort, bzw. dem Beugungswinkel anzugeben.
+\section{Bestimmung der Spaltgröße mit dem Mikroskop}
+In dem verwendeten Mikroskop ist eine lineare Skala willkürlicher Größe vorhanden. Um diese schließlich für die Ausmessung der Spalte verwenden zu können, ist eine Eichmessung nötig, die mittels einer auf einer Glasplatte vorhandenen Mikrometerskala geschieht. 
+\chapter{Auswertung}
+\section{Allgemeines zur Fehlerrechnung}
+Im folgenden werden häufig diese drei Formeln genutzt, um das Protokoll nicht unnötig zu strecken geben wir sie hier einmal an und verweisen in Folge darauf:
+Für den Mittelwert gilt:\\
+\[\overline{x} = \frac{1}{n} \cdot \sum_{i=1}^{n} x_i\]
+Für den absoluten Fehler gilt:\\
+\[\sigma_{\overline{x}} = \frac{1}{\sqrt{n}} \cdot \sqrt{\frac{1}{n-1}\sum_{i=1}^{n} (x_i - \overline{x})^2}\]
+Für den relativen Fehler gilt:\\
+\[\sigma_{\overline{x},rel} = \frac{\sigma_{\overline{x}}}{\overline{x}}\]
+\section{Messung mit dem Mikroskop}
+Die Eichung ergab sich durch folgende Messung:
+\begin{center}
+\begin{tabular}{c|c|c|c||c}
+$S_1$&	$S_2$&	$\Delta$s&	Entspricht Abstand [mm]&	Eichung je Skalenteil [mm]\\
+\hline
+35&	182&	147&	0,05&	3,40$\cdot 10^{-4}$\\
+0	&140&	140&	0,05&	3,57$\cdot 10^{-4}$\\
+41&	330&	289&	0,10&	3,46$\cdot 10^{-4}$\\
+53&	183&	130&	0,05&	3,85$\cdot 10^{-4}$\\
+2&	126&	124&	0,05&	4,03$\cdot 10^{-4}$\\
+\hline
+\hline				
+&&&Mittelwert&3,66$\cdot 10^{-4}$\\
+&&&absoluter Fehler&0,13$\cdot 10^{-4}$\\
+&&&Relativfehler&3,66\%
+\end{tabular}
+\end{center}
+Im folgenden kann also mit dem geeichten Mittelwert von (3,66 $\pm$ 0,12)$\cdot 10^{-4} mm/Skalenteil$ gerechnet werden.
+\subsection{Messung am Einzelspalt}
+Die Ausmessung des Einzelspaltes (angegebene Breite 0,08mm) ergab:
+\begin{center}
+\begin{tabular}{c|c|c||c}
+$S_1$&	$S_2$&	$\Delta$s&	Breite [mm]\\
+\hline
+16&	220&	204&	0,075\\
+14&	213&	199&	0,073\\
+20&	234&	214&	0,078\\
+60&	275&	215&	0,079\\
+70&	275&	205&	0,075\\
+\hline
+\hline				
+&&Mittelwert&0,076\\
+&&absoluter Fehler&0,001\\
+&&Relativfehler&1,66\%
+\end{tabular}
+\end{center}
+\subsection{Messung am Doppelspalt}
+Für die Breite beider Doppelspalte die mit jeweils 0,08mm angegeben waren ergibt sich:
+\begin{center}
+\begin{tabular}{c|c|c||c}
+$S_1$&	$S_2$&	$\Delta$s&	Breite [mm]\\
+\hline
+44&	254&	210&	0,077\\
+39&	252&	213&	0,078\\
+38&	243&	205&	0,075\\
+47&	260&	213&	0,078\\
+41&	239&	198&	0,073\\
+\hline
+\hline				
+&&Mittelwert&0,076\\
+&&absoluter Fehler&0,001\\
+&&Relativfehler&1,54\%
+\end{tabular}
+\end{center}
+die Länge s, welche den Abstand von der linken Kante des ersten Spaltes bis zur linken Kante des zweiten Spaltes bezeichnet, angegeben mit 0,25mm, ergab sich:
+\begin{center}
+\begin{tabular}{c|c|c||c}
+$S_1$&	$S_2$&	$\Delta$s&	Breite [mm]\\
+\hline
+91&	687&	596&	0,218\\
+80&	698&	618&	0,226\\
+53&	660&	607&	0,222\\
+76&	740&	664&	0,243\\
+55&	695&	640&	0,234\\
+\hline
+\hline				
+&&Mittelwert&0,229\\
+&&absoluter Fehler&0,005\\
+&&Relativfehler&2,18\%
+\end{tabular}
+\end{center}
+\newpage
+\section{Bestimmung der Beugungsfigur}
+\subsection{Allgemeines}
+Der gemessene Dunkelstrom beträgt -0,0044 $\mu$A, er muss also bei jedem Messwert abgezogen werden um die erhaltenen Messwerte um den Offset zu bereinigen. Zudem wurde ein Strom den wir als Störstrom bezeichnen gemessen, der das einfallende Licht bei der Messung aus dem Raum beschreibt. Dieser wurde mit -0,0040 $\mu$A gemessen, abzüglich des Dunkelstroms der Photodiode ergibt sich also eine durch nicht zur Messung gehörige Lichtquellen registrierte Intensität von	0,0004 $\mu$A. Dieser Wert fällt zwar aufgrund seiner relativen Größe kaum ins Gewicht, wurde aber dennoch zusätzlich zum Dunkelstrom von dem gemessenen Werten abgezogen um einen korrekten Messwert zu erhalten, diese Korektur ist als "I (bereinigt)" in den Tabellen aufgenommen. 
+Des weiteren wurde noch die Länge L zwischen Spalt und Photodiode ermittelt. Es ergaben sich folgende Messwerte:
+\begin{center}
+\begin{tabular}{c}
+L [cm]\\
+\hline
+90,1\\
+90,2\\
+90,1\\
+90,0\\
+90,1\\
+\end{tabular}
+\end{center}
+Daraus ergab sich ein Mittelwert von (90,1 $\pm$ 0,04) cm. Die Wellenlänge des Lasers betrug 633nm. Diese Werte sind in allen drei folgenden Messungen identisch. 
+\subsection{Messung am festen Einfach-Spalt}
+\subsubsection{Beugungsfunktion}
+Wie auch in den beiden noch nachfolgenden Messungen wurde hier das um Dunkelstrom und Störstrom bereinigte I angegeben. Da sich aber sofort zeigt, das die ersten beiden Messwerte ein negatives Vorzeichen aufweisen, wurde um keine negativen Werte zu behandeln dieser Offset behoben durch Addition aller Werte um den größten negativen Wert (-0,014 $\mu$A).
+Wir erhielten nun durch die Vermessung der Beugungsfigur die in Tabelle 4.1 dargestellten Werte. Eine nicht-lineare Regression (vgl. Abb. 3.1) der Gleichung 2.4, liefert die Spaltbreite sowie Amplitude.\\
+Den benötigten Beugungswinkel (ebenfalls in Tabelle 4.1 aufgetragen) errechnet sich nach
+\begin{equation}
+\varphi \approx \frac{x-x_0}{L} \text{     ,}
+\end{equation}
+wobei x die Position der Messstelle, $x_0$ die Position des Hauptmaximums und L die Entfernung zwischen Laser und Spalt dartellt.\\
+Durch unsere Messung bestimmt wir die Lage das Hauptmaximums zu 23,02 mm .
+Wir passen die Funtkion 2.4 mittels nichtlinearer Regression durch das Programm Gnuplot nach der Methode der kleinsten Quadrate (vgl. Abb. 4.1) an unsere Werte an. Wir setzen dabei, da es sich generell nur um sehr kleine Winkel handelt
+\begin{equation}
+\sin{\varphi} = \varphi \text{   .}
+\end{equation}
+Wir erhalten dadurch
+\begin{eqnarray*}
+A_0 &=& (26,1558 \pm 0,15479)  A \\
+b &=& (77,5 \pm 0,052)  \mu m \text{   .}
+\end{eqnarray*}
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|l|r|r|r|r|}
+\hline
+\multicolumn{1}{|r|}{\textbf{Bemerkung}} & \multicolumn{1}{|c|}{\textbf{X [mm]}} & \multicolumn{1}{|c|}{$\varphi [°]$} & \multicolumn{1}{|c|}{\textbf{I} $[\mu A$]} & \multicolumn{1}{|c|}{\textbf{I$_{korr}$} [$\mu$ A]} \\ \hline \hline
+\multicolumn{1}{|r|}{Minimum} & 1,37 & -0,024 & -0,02 & 0,00 \\
+ & 2,00 & -0,023 & -0,01 & 0,00 \\
+ & 3,00 & -0,022 & 0,01 & 0,03 \\
+ & 4,00 & -0,021 & 0,05 & 0,07 \\
+ & 5,00 & -0,020 & 0,08 & 0,10 \\
+\multicolumn{1}{|r|}{Maximum} & 5,40 & -0,020 & 0,08 & 0,10 \\
+ & 6,00 & -0,019 & 0,08 & 0,09 \\
+ & 7,00 & -0,018 & 0,05 & 0,07 \\
+ & 8,00 & -0,017 & 0,01 & 0,03 \\
+\multicolumn{1}{|r|}{Minimum} & 8,79 & -0,016 & 0,00 & 0,02 \\
+ & 9,00 & -0,016 & 0,00 & 0,02 \\
+ & 10,00 & -0,014 & 0,03 & 0,05 \\
+ & 11,00 & -0,013 & 0,11 & 0,13 \\
+ & 12,00 & -0,012 & 0,18 & 0,20 \\
+\multicolumn{1}{|r|}{Maximum} & 12,83 & -0,011 & 0,21 & 0,23 \\
+ & 13,00 & -0,011 & 0,21 & 0,22 \\
+ & 14,00 & -0,010 & 0,16 & 0,18 \\
+ & 15,00 & -0,009 & 0,07 & 0,09 \\
+\multicolumn{1}{|r|}{Minimum} & 15,87 & -0,008 & 0,04 & 0,05 \\
+ & 16,00 & -0,008 & 0,04 & 0,06 \\
+ & 17,00 & -0,007 & 0,18 & 0,19 \\
+ & 18,00 & -0,006 & 0,58 & 0,60 \\
+ & 19,00 & -0,004 & 1,30 & 1,32 \\
+ & 20,00 & -0,003 & 2,20 & 2,22 \\
+ & 21,00 & -0,002 & 3,10 & 3,12 \\
+ & 22,00 & -0,001 & 3,80 & 3,82 \\
+ & 23,00 & -0,00002 & 4,00 & 4,02 \\
+Haupt Max. & 23,02 & 0 & 4,10 & 4,12 \\
+ & 24,00 & 0,001 & 3,90 & 3,92 \\
+ & 25,00 & 0,002 & 3,20 & 3,22 \\
+ & 26,00 & 0,003 & 2,40 & 2,42 \\
+ & 27,00 & 0,004 & 1,55 & 1,57 \\
+ & 28,00 & 0,006 & 0,72 & 0,74 \\
+ & 29,00 & 0,007 & 0,25 & 0,27 \\
+ & 30,00 & 0,008 & 0,07 & 0,08 \\
+\multicolumn{1}{|r|}{Minimum} & 30,46 & 0,008 & 0,05 & 0,07 \\
+ & 31,00 & 0,009 & 0,07 & 0,08 \\
+ & 32,00 & 0,010 & 0,14 & 0,16 \\
+ & 33,00 & 0,011 & 0,20 & 0,21 \\
+\multicolumn{1}{|r|}{Maximum} & 33,34 & 0,011 & 0,20 & 0,22 \\
+ & 34,00 & 0,012 & 0,18 & 0,20 \\
+ & 35,00 & 0,013 & 0,01 & 0,03 \\
+ & 36,00 & 0,014 & 0,06 & 0,07 \\
+ & 37,00 & 0,016 & 0,01 & 0,03 \\
+\multicolumn{1}{|r|}{Minimum} & 37,49 & 0,016 & 0,01 & 0,03 \\
+ & 38,00 & 0,017 & 0,01 & 0,03 \\
+ & 39,00 & 0,018 & 0,04 & 0,06 \\
+ & 40,00 & 0,019 & 0,07 & 0,09 \\
+ & 41,00 & 0,020 & 0,08 & 0,10 \\
+\multicolumn{1}{|r|}{Maximum} & 41,02 & 0,020 & 0,08 & 0,10 \\
+ & 42,00 & 0,021 & 0,07 & 0,09 \\
+ & 43,00 & 0,022 & 0,04 & 0,06 \\
+ & 44,00 & 0,023 & 0,01 & 0,03 \\
+ & 45,00 & 0,024 & 0,00 & 0,02 \\
+\multicolumn{1}{|r|}{Minimum} & 45,22 & 0,025 & 0,00 & 0,02 \\ \hline
+\end{tabular}
+\end{center}
+\caption{Intensitätsverteilung am Einzelspalt}
+\label{tab:tab}
+\end{table}
+
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[scale = 0.8]{einzelsp}
+	\end{center}
+	\caption{Intensitätsverteilung am Einzelspalt}
+	\label{fig:abbildung1}
+	\end{figure}
+\subsubsection{Fouriertransformation}
+Um die Fouriertransformierte 2.7 auf die Intensitätsmesswerte anwenden zu können, bilden wir
+\begin{equation*}
+|g|(\xi) = g(\xi)\cdot g^*(\xi) = \frac{4}{A_0^2}\sin^2{\frac{\xi b}{2}} \ext{    ,}
+\end{equation*}
+wobei g* gerade die komplex konjugierte von g ist. Durch einsetzen von 2.8 und anwenden der Näherung 4.2 ergibt sich
+\begin{equation*}
+|g|(\varphi)=\frac{4 A_0^2 \cdot \lambda^2}{4 \pi^2 \varphi^2}\cdot \sin^2{\frac{2\pi b \varphi}{\lambda}} \text{   .}
+\end{equation*}
+Für die Regression (vgl. Abb. 4.4) verwenden wiederum die Messwerte aus Tabelle 4.1. Diese liefert die Werte
+\begin{eqnarray*}
+A_0 &=& (26,16 \pm 0,15) A \\
+b &=& (38,47 \pm 0,02) \mu m \text{    .}
+\end{eqnarray*}
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[scale = 0.8]{festfour}
+	\end{center}
+	\caption{Fouriertransformierte für den festen Einzelspalt}
+	\label{fig:abbildung1}
+	\end{figure}
+
+\newpage
+\subsection{Messung am variablen Einfach-Spalt}
+\subsubsection{Beugungsfunktion}
+Wir gingen analog zu der Messung am Einfachspalt  vor (Hauptmaximum bei 23,31 mm) und erhielten die in Tabelle 4.2 aufgetragenen Werte. Die nichtlineare Regression (vgl. Abb. 3.3) ergab hierbei
+\begin{eqnarray*}
+A_0 &=& (45.3959  \pm 0.4675) A\\
+b   &=& (72,42   \pm 0,084) \mu m \text{  .}
+\end{eqnarray*}
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|l|r|r|r|r|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Bemerkung}} & \multicolumn{1}{|c|}{\textbf x[mm]} & \multicolumn{1}{|c|}{$\varphi[°]$} & \multicolumn{1}{|c|}{\textbf{I [$\mu$ A]}} & \multicolumn{1}{|c|}{\textbf{I$_{korr.} [\mu A]$}} \\ \hline \hline
+\multicolumn{1}{|r|}{Minimum} & 1,29 & -0,024 & 0,01 & 0,01 \\
+ & 2,00 & -0,024 & 0,02 & 0,02 \\
+ & 3,00 & -0,023 & 0,06 & 0,07 \\
+ & 4,00 & -0,021 & 0,14 & 0,14 \\
+ & 5,00 & -0,020 & 0,21 & 0,21 \\
+\multicolumn{1}{|r|}{Maximum} & 5,87 & -0,019 & 0,23 & 0,23 \\
+ & 6,00 & -0,019 & 0,23 & 0,23 \\
+ & 7,00 & -0,018 & 0,20 & 0,20 \\
+ & 8,00 & -0,017 & 0,13 & 0,13 \\
+\multicolumn{1}{|r|}{Minimum} & 8,93 & -0,016 & 0,09 & 0,10 \\
+ & 9,00 & -0,016 & 0,10 & 0,10 \\
+ & 10,00 & -0,015 & 0,16 & 0,16 \\
+ & 11,00 & -0,014 & 0,32 & 0,32 \\
+ & 12,00 & -0,013 & 0,48 & 0,48 \\
+ & 13,00 & -0,011 & 0,57 & 0,57 \\
+\multicolumn{1}{|r|}{Maximum} & 13,06 & -0,011 & 0,58 & 0,58 \\
+ & 14,00 & -0,010 & 0,48 & 0,48 \\
+ & 15,00 & -0,009 & 0,29 & 0,29 \\
+\multicolumn{1}{|r|}{Minimum} & 16,00 & -0,008 & 0,18 & 0,18 \\
+ & 17,00 & -0,007 & 0,46 & 0,46 \\
+ & 18,00 & -0,006 & 1,45 & 1,45 \\
+ & 19,00 & -0,005 & 3,20 & 3,20 \\
+ & 20,00 & -0,004 & 5,60 & 5,60 \\
+ & 21,00 & -0,003 & 8,20 & 8,20 \\
+ & 22,00 & -0,001 & 10,05 & 10,05 \\
+ & 23,00 & 0,000 & 10,15 & 10,15 \\
+\multicolumn{1}{|r|}{Haupt Maximum} & 23,31 & 0,000 & 10,20 & 10,20 \\
+ & 24,00 & 0,001 & 10,15 & 10,15 \\
+ & 25,00 & 0,002 & 10,05 & 10,05 \\
+ & 26,00 & 0,003 & 8,00 & 8,00 \\
+ & 27,00 & 0,004 & 5,40 & 5,40 \\
+ & 28,00 & 0,005 & 2,95 & 2,95 \\
+ & 29,00 & 0,006 & 1,20 & 1,20 \\
+ & 30,00 & 0,007 & 0,34 & 0,34 \\
+\multicolumn{1}{|r|}{Minimum} & 30,89 & 0,008 & 0,13 & 0,13 \\
+ & 31,00 & 0,009 & 0,14 & 0,14 \\
+ & 32,00 & 0,010 & 0,29 & 0,29 \\
+ & 33,00 & 0,011 & 0,50 & 0,50 \\
+\multicolumn{1}{|r|}{Maximum} & 33,87 & 0,012 & 0,56 & 0,56 \\
+ & 34,00 & 0,012 & 0,55 & 0,55 \\
+ & 35,00 & 0,013 & 0,40 & 0,40 \\
+ & 36,00 & 0,014 & 0,21 & 0,21 \\
+ & 37,00 & 0,015 & 0,08 & 0,08 \\
+\multicolumn{1}{|r|}{Minimum} & 37,63 & 0,016 & 0,06 & 0,06 \\
+ & 38,00 & 0,016 & 0,06 & 0,07 \\
+ & 39,00 & 0,017 & 0,14 & 0,14 \\
+ & 40,00 & 0,019 & 0,23 & 0,23 \\
+ & 41,00 & 0,020 & 0,28 & 0,28 \\
+\multicolumn{1}{|r|}{Maximum} & 41,16 & 0,020 & 0,28 & 0,28 \\
+ & 42,00 & 0,021 & 0,25 & 0,25 \\
+ & 43,00 & 0,022 & 0,16 & 0,16 \\
+ & 44,00 & 0,023 & 0,07 & 0,08 \\
+ & 45,00 & 0,024 & 0,03 & 0,03 \\
+\multicolumn{1}{|r|}{Minimum} & 45,32 & 0,024 & 0,02 & 0,03 \\ \hline
+\end{tabular}
+\end{center}
+\caption{Intensitätsverteilung am variablen Einzelspalt}
+\label{}
+\end{table}
+
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[scale = 0.8]{varsp}
+	\end{center}
+	\caption{Intensitätsverteilung am variablen Einzelspalt}
+	\label{fig:abbildung2}
+	\end{figure}
+\subsubsection{Fouriertransformierte}
+Wir gehen wieder genau analog zum festen Einzelspalt vor. Die Regression (vgl. Abb. 4.3) ergibt
+\begin{eqnarray*}
+A_0 &=& (45,40 \pm 0,46) A\\
+b &=& (36,21 \pm 0,04) \mu m {   .}
+\end{eqnarray*}
+
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[scale = 0.8]{fourvar}
+	\end{center}
+	\caption{Fouriertransformation am variablen Einzelspalt}
+	\label{fig:abbildung2}
+	\end{figure}
+\newpage
+\subsection{Messung am Doppelspalt}
+Analog zu den Einzelspaltmessungen gingen wir beim Doppelspalt vor. Für die Intensitätsverteilung verwendeten wir Gleichung 2.4, die auf unsere Messwerte angepasst wurde. Die Werte sind in Tabelle 4.3 enthalten. Die Regression ist in Abb. 4.5 zu finden. Das Hauptmaximum bestimmten befand sich bei 23,21 mm.\\
+Dadurch erhielten wir die Parameter
+\begin{eqnarray*}
+A_0 &=& (43,0 \pm 1,93) A\\
+b &=& (4,4 \pm 0,02) mm\\
+s &=& (1,4 \pm 0,002)cm \text{   .}
+\end{eqnarray*}
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|l|r|r|r|r|l|r|r|r|r|}
+\hline
+\multicolumn{1}{|c|}{Bem.} & \multicolumn{1}{|c|}{X [mm]} & \multicolumn{1}{|c|}{$\varphi$ [°]} & \multicolumn{1}{|c|}{$I [\mu A]$} & \multicolumn{1}{|c|}{I$_korr$ [\mu A]} & \multicolumn{1}{|c|}{Bem.} & \multicolumn{1}{|c|}{X [mm]} & \multicolumn{1}{|c|}{$\varphi$ [°]} & \multicolumn{1}{|c|}{$I [\mu A]$} & \multicolumn{1}{|c|}{I$_korr$ [\mu A]} \\ \hline
+Min & -0,61 & -0,027 & 0,02 & 0,02 &  & 23,50 & 0,000 & 36,00 & 36,00 \\ \hline
+ & -0,50 & -0,027 & 0,02 & 0,02 &  & 24,00 & 0,001 & 11,00 & 11,00 \\ \hline
+ & 0,00 & -0,026 & 0,05 & 0,05 & Min & 24,31 & 0,001 & 4,20 & 4,20 \\ \hline
+Maximum & 0,45 & -0,026 & 0,06 & 0,07 &  & 24,50 & 0,001 & 6,20 & 6,20 \\ \hline
+ & 1,00 & -0,025 & 0,05 & 0,05 &  & 25,00 & 0,002 & 25,00 & 25,00 \\ \hline
+Min & 1,32 & -0,025 & 0,03 & 0,04 &  & 25,40 & 0,002 & 34,00 & 34,00 \\ \hline
+ & 1,50 & -0,024 & 0,04 & 0,04 & Max & 25,50 & 0,002 & 32,00 & 32,00 \\ \hline
+ & 2,00 & -0,024 & 0,16 & 0,16 &  & 26,00 & 0,003 & 18,00 & 18,00 \\ \hline
+ & 2,50 & -0,023 & 0,38 & 0,38 &  & 26,50 & 0,003 & 3,40 & 3,40 \\ \hline
+Maximum & 2,73 & -0,023 & 0,41 & 0,41 & Min & 26,66 & 0,004 & 2,65 & 2,65 \\ \hline
+ & 3,00 & -0,023 & 0,34 & 0,34 &  & 27,00 & 0,004 & 6,00 & 6,00 \\ \hline
+ & 3,50 & -0,022 & 0,11 & 0,11 & Max & 27,58 & 0,005 & 13,00 & 13,00 \\ \hline
+Min & 3,68 & -0,022 & 0,07 & 0,08 &  & 28,00 & 0,005 & 7,80 & 7,80 \\ \hline
+ & 4,00 & -0,022 & 0,19 & 0,19 &  & 28,50 & 0,006 & 3,20 & 3,20 \\ \hline
+ & 4,50 & -0,021 & 0,68 & 0,68 & Min & 29,10 & 0,006 & 0,90 & 0,90 \\ \hline
+Maximum & 4,87 & -0,021 & 0,86 & 0,86 &  & 29,50 & 0,007 & 1,55 & 1,55 \\ \hline
+ & 5,50 & -0,020 & 0,42 & 0,42 & Max & 29,69 & 0,007 & 1,65 & 1,65 \\ \hline
+Min & 6,10 & -0,019 & 0,07 & 0,08 &  & 30,00 & 0,007 & 1,35 & 1,35 \\ \hline
+ & 6,50 & -0,019 & 0,19 & 0,19 &  & 30,50 & 0,008 & 0,48 & 0,48 \\ \hline
+Maximum & 7,05 & -0,018 & 0,34 & 0,34 & Min & 30,96 & 0,008 & 0,15 & 0,15 \\ \hline
+ & 7,50 & -0,018 & 0,25 & 0,25 &  & 31,50 & 0,009 & 0,48 & 0,48 \\ \hline
+ & 8,00 & -0,017 & 0,11 & 0,11 &  & 32,00 & 0,009 & 1,15 & 1,15 \\ \hline
+Min & 8,49 & -0,017 & 0,05 & 0,05 & Max & 32,29 & 0,010 & 1,40 & 1,40 \\ \hline
+ & 9,00 & -0,016 & 0,17 & 0,17 &  & 32,50 & 0,010 & 1,30 & 1,30 \\ \hline
+ & 9,50 & -0,016 & 0,43 & 0,43 &  & 33,00 & 0,011 & 0,60 & 0,60 \\ \hline
+Maximum & 9,75 & -0,015 & 0,47 & 0,47 & Min & 33,41 & 0,011 & 0,20 & 0,20 \\ \hline
+ & 10,00 & -0,015 & 0,40 & 0,40 &  & 34,00 & 0,012 & 1,20 & 1,20 \\ \hline
+Min & 10,55 & -0,014 & 0,15 & 0,15 & Max & 34,55 & 0,012 & 2,05 & 2,05 \\ \hline
+ & 11,00 & -0,014 & 0,60 & 0,60 &  & 35,00 & 0,013 & 1,45 & 1,45 \\ \hline
+ & 11,50 & -0,013 & 1,75 & 1,75 &  & 35,50 & 0,013 & 0,40 & 0,40 \\ \hline
+Maximum & 11,81 & -0,013 & 2,05 & 2,05 & Min & 35,81 & 0,014 & 0,20 & 0,20 \\ \hline
+ & 12,00 & -0,013 & 1,95 & 1,95 &  & 36,00 & 0,014 & 0,23 & 0,23 \\ \hline
+ & 12,50 & -0,012 & 0,82 & 0,82 &  & 36,50 & 0,014 & 0,54 & 0,54 \\ \hline
+Min & 12,92 & -0,012 & 0,26 & 0,26 & Max & 36,72 & 0,015 & 0,60 & 0,60 \\ \hline
+ & 13,50 & -0,011 & 1,10 & 1,10 &  & 37,00 & 0,015 & 0,52 & 0,52 \\ \hline
+Max & 14,06 & -0,010 & 1,65 & 1,65 &  & 37,50 & 0,016 & 0,21 & 0,21 \\ \hline
+ & 14,50 & -0,010 & 1,10 & 1,10 & Min & 38,05 & 0,016 & 0,08 & 0,09 \\ \hline
+ & 15,00 & -0,009 & 0,34 & 0,34 &  & 38,50 & 0,017 & 0,14 & 0,14 \\ \hline
+Min & 15,41 & -0,009 & 0,13 & 0,13 &  & 39,00 & 0,017 & 0,22 & 0,22 \\ \hline
+ & 16,00 & -0,008 & 0,46 & 0,46 & Max & 39,27 & 0,018 & 0,24 & 0,24 \\ \hline
+ & 16,50 & -0,008 & 0,92 & 0,92 &  & 39,50 & 0,018 & 0,21 & 0,21 \\ \hline
+Max & 16,65 & -0,008 & 0,95 & 0,95 &  & 40,00 & 0,018 & 0,08 & 0,08 \\ \hline
+ & 17,00 & -0,007 & 0,68 & 0,68 & Min & 40,26 & 0,019 & 0,04 & 0,05 \\ \hline
+Min & 17,30 & -0,007 & 0,42 & 0,42 &  & 40,50 & 0,019 & 0,09 & 0,09 \\ \hline
+ & 17,50 & -0,007 & 0,66 & 0,66 &  & 41,00 & 0,019 & 0,46 & 0,46 \\ \hline
+ & 18,00 & -0,006 & 4,20 & 4,20 & Max & 41,54 & 0,020 & 0,79 & 0,79 \\ \hline
+ & 18,50 & -0,006 & 9,60 & 9,60 &  & 42,00 & 0,021 & 0,50 & 0,50 \\ \hline
+Max & 18,77 & -0,005 & 10,05 & 10,05 &  & 42,50 & 0,021 & 0,12 & 0,12 \\ \hline
+ & 19,00 & -0,005 & 8,80 & 8,80 & Min & 42,76 & 0,021 & 0,08 & 0,08 \\ \hline
+ & 19,50 & -0,004 & 2,55 & 2,55 &  & 43,00 & 0,022 & 0,14 & 0,14 \\ \hline
+Min & 19,67 & -0,004 & 1,80 & 1,80 &  & 43,50 & 0,022 & 0,36 & 0,36 \\ \hline
+ & 20,00 & -0,004 & 6,00 & 6,00 & Max & 43,74 & 0,022 & 0,38 & 0,38 \\ \hline
+ & 20,50 & -0,003 & 22,50 & 22,50 &  & 44,00 & 0,023 & 0,32 & 0,32 \\ \hline
+Max & 20,98 & -0,003 & 31,00 & 31,00 &  & 44,50 & 0,023 & 0,14 & 0,14 \\ \hline
+ & 21,50 & -0,002 & 16,50 & 16,50 &  & 45,00 & 0,024 & 0,05 & 0,05 \\ \hline
+Min & 22,01 & -0,002 & 3,80 & 3,80 &  & 45,50 & 0,024 & 0,04 & 0,04 \\ \hline
+ & 22,50 & -0,001 & 19,00 & 19,00 &  & 46,00 & 0,025 & 0,03 & 0,03 \\ \hline
+ & 23,00 & -0,001 & 42,00 & 42,00 &  & 46,50 & 0,026 & 0,02 & 0,02 \\ \hline
+H. Max. & 23,21 & 0,000 & 44,00 & 44,00 & Min & 46,86 & 0,026 & 0,01 & 0,02 \\ \hline
+\end{tabular}
+\caption{Intensitätsverteilung am Doppelspalt}
+\end{center}
+\label{}
+\end{table}
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[scale = 0.8]{doppelsp}
+	\end{center}
+	\caption{Intensitätsverteilung am Doppelspalt}
+	\label{fig:abbildung2}
+	\end{figure}
+\newpage
+\section{Zusammenfassung, Vergleich und Fehlerbetrachtung}
+Im folgenden Vergleichen wir die erhaltenen Werte für den festen Einzel- sowie den den Doppelspalt. Aufgrund fehlender vergleichender Messungen für den variablen Einzelspalt und der Tatsache, das seine Breite nicht bekannt war, erfolgt für diesen keinen Vergleich.
+\begin{center}
+\begin{tabular}{c|c|c|c}
+Methode&Einzelspalt b [mm]&Doppelspalt b [mm]&Doppelspalt s [mm]\\
+\hline
+Angegebener Wert&0,08&0,08&0,25\\
+\hline
+Messung durch Mikroskop&0,076 $\pm$ 0,001&0,076 $\pm$ 0,001&0,229 $\pm$ 0,005\\
+\hline
+Messung durch Beugungsmuster&0,078\pm 0,005 &14 \pm 0,02 &4,4 \pm 0,02\\
+\hline
+Bestimmung durch FT. &0,038\pm 0,0002&-&-
+\end{tabular}
+\end{center}
+Während die Messung für den Einzelspalt Werte liefert, die nahe an realen Spaltbreite liegen, ergeben sich sehr große Abweichung um mehrere Zehnerpotenzen für die Messung am Doppelspalt. Die Ursache dafür liegt wahrscheinlich an der geringen Anzahl von Messwerten im Bereich des Hauptmaximums.\\
+Die Fouriertransformation liefert einen Wert, der in der gleichen Größenordnung wie die Messung durch Mikroskop und Beugungsfigur liegt, jedoch ziemlich exakt nur halb so groß ist.\\
+Im Allgemeinen erweist sich die Ausmessung mit dem Mikroskop als exakteste und am wenigsten störanfällige Methode, da gerade auch die komplizierte nicht-lineare Regression der Messwerte entfällt.\\
+\end{document}

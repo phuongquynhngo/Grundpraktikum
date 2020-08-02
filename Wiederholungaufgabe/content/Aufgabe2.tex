@@ -1,0 +1,22 @@
+\section{Aufgabe 2}
+\label{sec:Aufgabe 2}
+Berechnen Sie das Volumen eines Hohlzylinders, mit $R_{\text{innen}}=(10 \pm 1)$ cm, $R_{\text{au"sen}}=(15 \pm 1)$ cm und $h=(20 \pm 1)$ cm
+       
+Die Formel für das Volumen eines Hohlzylinders lautet
+\begin{equation}
+    V=\pi \cdot h \cdot({R_{\text{au"sen}}}^2-{R_{\text{innen}}}^2).
+\end{equation}
+
+Der Fehler für $V$ wird dabei über die Gau"s´sche Fehlerfortfplanzung 
+\begin{equation}
+    \Delta f= \sqrt{\sum_{i=1}^N {\Bigl(\frac{\partial f}{\partial y_i}\Bigr)^2 (\Delta y_i)^2}}
+\end{equation}
+berechnet: 
+\begin{align*}
+    \Delta V= \sqrt{(\pi \cdot \Delta h \cdot({R_{\text{au"sen}}}^2-{R_{\text{innen}}}^2))^2 + (2 \pi \cdot h \cdot R_{\text{au"sen}} \cdot \Delta R_{\text{au"sen}} )^2 + (2 \pi \cdot h \cdot R_{\text{innen}} \cdot \Delta R_{\text{innen}} )^2 }
+\end{align*}
+
+Somit ergibt sich als Volumen des Hohlzylinders 
+\begin{align*}
+    V &= (7853,98 \pm 105,37) \mathrm{cm^3}. \\
+\end{align*}

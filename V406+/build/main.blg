@@ -1,0 +1,19 @@
+[0] Config.pm:304> INFO - This is Biber 2.13
+[1] Config.pm:307> INFO - Logfile is 'build/main.blg'
+[59] biber:315> INFO - === Thu Jul 23, 2020, 22:08:57
+[135] Biber.pm:375> INFO - Reading 'build/main.bcf'
+[232] Biber.pm:905> INFO - Found 1 citekeys in bib section 0
+[257] Biber.pm:4196> INFO - Processing section 0
+[314] Utils.pm:75> INFO - Globbing data source 'lit.bib'
+[316] Utils.pm:91> INFO - Globbed data source 'lit.bib' to lit.bib
+[316] Utils.pm:75> INFO - Globbing data source 'programme.bib'
+[317] Utils.pm:91> INFO - Globbed data source 'programme.bib' to programme.bib
+[354] Biber.pm:4373> INFO - Looking for bibtex format file 'lit.bib' for section 0
+[367] bibtex.pm:1462> INFO - LaTeX decoding ...
+[379] bibtex.pm:1281> INFO - Found BibTeX data source 'lit.bib'
+[404] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[405] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[405] Biber.pm:4024> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[406] Biber.pm:4030> INFO - No sort tailoring available for locale 'de-DE'
+[455] bbl.pm:648> INFO - Writing 'build/main.bbl' with encoding 'UTF-8'
+[456] bbl.pm:751> INFO - Output to build/main.bbl

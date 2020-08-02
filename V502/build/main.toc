@@ -1,0 +1,13 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {ngerman}{}
+\contentsline {section}{\numberline {1}Theorie}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Berechnung der Elektronenbahn im homogenen Magnetfeld}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Experimentelle Bestimmung der spezifischen Elektronenladung}{4}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Durchführung}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Bestimmung der spezifische Ladung der Elektronen}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Bestimmung der Intensität des lokalen Erdmagnetfeldes}{5}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Auswertung}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Bestimmung der spezifische Ladung der Elektronen}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Bestimmung der Intensität des lokalen Erdmagnetfeldes}{7}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Diskussion}{8}{section.4}%
+\contentsline {section}{\nonumberline Literatur}{9}{section*.5}%

@@ -1,0 +1,9 @@
+[1] Config.pm:304> INFO - This is Biber 2.13
+[2] Config.pm:307> INFO - Logfile is 'build/main.blg'
+[67] biber:315> INFO - === Tue Apr 21, 2020, 14:43:24
+[200] Biber.pm:375> INFO - Reading 'build/main.bcf'
+[350] Biber.pm:905> INFO - Found 0 citekeys in bib section 0
+[365] Utils.pm:300> WARN - The file 'build/main.bcf' does not contain any citations!
+[393] bbl.pm:648> INFO - Writing 'build/main.bbl' with encoding 'UTF-8'
+[396] bbl.pm:751> INFO - Output to build/main.bbl
+[399] Biber.pm:110> INFO - WARNINGS: 1

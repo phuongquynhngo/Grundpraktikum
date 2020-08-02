@@ -1,0 +1,190 @@
+\section{Auswertung}
+\label{sec:Auswertung}
+\subsection{Statische Methode}
+In den folgenden Abbildungen sind die Temperaturkurven der Thermoelemente T1, T4, T5 und T8 dargestellt.
+Daraus können Schlüsse über die Wärmeleitung der einzelnen Stäbe gezogen werden.
+Alle Temperaturkurven steigen monoton und sind nach oben beschränkt.
+Im Vergleich der fernen Thermoelemente T1 und T4 in Abbildung[2] des breiten und des schmalen Messingstabes fällt auf,
+dass die Kurve des schmalen Stabes weniger stark steigt, als die des breiten Messingstabes. Daraus kann eine bessere Wärmeleitung des breiten Stabes 
+abgeleitet werden. Dieses Ergebnis liefert auch die Gleichung[1].
+In Abbildung[3] werden die Temperaturkurven von Aluminium T5 und Edelstahl T8 verglichen. Die Kurve des Aluminiumstabes zeigt eine deutlich größere Steigung 
+als die Edelstahlkurve. Aluminium leitet also besser Wärme als Edelstahl.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{700secstat14Messing.pdf}
+  \caption{Temperaturverläufe der Thermoelemente T1(Messing,breit) und T4(Messing,schmal) in einem Zeitraum von 700 s.}
+  \label{fig:2}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{700secstat58AluStahl.pdf}
+  \caption{Temperaturverläufe der Thermoelemente T5(Aluminium) und T8(Edelstahl) in einem Zeitraum von 700 s.}
+  \label{fig:3}
+\end{figure}
+
+Anhand der Temperaturen der fernen Thermoelemente nach 700 s in Tabelle[1] kann die Wärmeleitung der Stäbe verglichen werden.
+Der Aluminiumstab hat nach 700 s die größte Temperatur, daraus wird abgeleitet, dass Aluminium die beste Wärmeleitung hat. Die schlechteste
+Wärmeleitung hat Edelstahl, da der Edelstahlstab nach 700 s die geringste Temperatur hat.
+Außerdem zeigen die Werte eine bessere Wärmeleitung des breiten Messingstabes als des schmalen Messingstabes, welches durch Gleichung [1] bestätigt wird.
+Die Temperaturen nach 700 s bestätigen die Ergebnisse aus der Auswertung der Abbildungen[2] und [3].
+\begin{table}[H]
+  \centering
+  \caption{Temperaturen der fernen Thermoelemente nach 700s}
+  \label{tab:1}
+  \begin{tabular}{c c c c}
+    \toprule
+    $T_{Messing,breit}$ in $°C$ &   $T_{Messing,schmal}$ in $°C$ &  $T_{Aluminium}$ in $°C$ &  $T_{Edelstahl}$ in $°C$ \\
+    \midrule
+    48,14 & 41,11 & 52,45 & 37,04\\
+    \bottomrule
+  \end{tabular}
+\end{table}  
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{700secstatdifferenz.pdf}
+  \caption{Temperaturdifferenz zwischen dem Ende T8 und dem Anfang T7 des Edelstahlstabs und Temperaturdifferenz zwischen dem Ende T1 und dem Anfang T2 des breiten Messingstabs.}
+  \label{fig:4}
+\end{figure}
+Aus Abbildung [4] lässt sich entnehmen, dass der breite Messingstab eine bessere Wärmeleitung als der Edelstahlstab besitzt, da die Temperaturdifferenz
+zwischen den Thermoelementen T7 und T8 deutlich größer ist. \\
+Mit Gleichung[1] und den Werten aus den folgenden Tabellen werden die Wärmeströme $\Delta Q / \Delta t$ berechnet.
+Die Entfernung $\Delta x = 0,03 \text{m}$ wird gemessen.
+\begin{table}[H]
+  \centering
+  \caption{Werte zur Berechnung der Wärmeströme und Wärmeleitfähigkeit}
+  \label{tab:2}
+  \begin{tabular}{c c c c c}
+  \toprule
+  Material & $\kappa $ in $\frac{W}{mK}$ & $\rho$ in $\frac{kg}{m^3}$ & $c$ in $\frac{J}{kg\cdot K}$ & $A$ in $m^2$\\
+  \midrule
+    Messing & 120 & 8520 & 385 & 4,8 $\cdot 10^{-5}$ \\
+    Messing & 120 & 8520 & 385 & 2,8 $\cdot 10^{-5}$ \\
+    Aluminium & 236 & 2800 & 830 & 4,8 $\cdot 10^{-5}$ \\
+    Edelstahl & 53 & 8000 & 400 & 4,8 $\cdot 10^{-5}$ \\
+  \bottomrule
+\end{tabular}
+\end{table}
+\begin{table}[H]
+  \tiny
+  \centering
+  \caption{Wärmeströme}
+  \label{tab:3}
+  \begin{tabular}{c c c c c c c c c}
+  \toprule
+  Zeit in s & $T_2 - T_1$ in K & $T_3 - T_4$ in K  & $T_6 - T_5$ in K  & $T_7 - T_8$ in K  & $\frac{dQ_{M,breit}}{dt}$ in W & $\frac{dQ_{M,schmal}}{dt}$ in W & $\frac{dQ_{A}}{dt}$ in W & $\frac{dQ_{S}}{dt}$ in W\\
+  \midrule
+    100 & 5,2 & 3,02 &2,07 & 7,28&-0,0998&-0,338&-0,782&-0,617\\
+    200 & 4,1 & 2,9 &1,01&9,95&-0,787&-0,325&-0,381&-0,844\\
+    300 & 3,46 & 2,72 &0,57&10,16&-0,664 &-0,305&-0,215&-0,862\\
+    500 & 3,02 & 2,57 &0,3&9,91&-0,580&-0,288&-0,113&-0,840\\
+    700 & 2,96 & 2,59 &0,25&9,88&-0,568&-0,290 &-0,094 & -0,838\\
+  \bottomrule
+\end{tabular}
+\end{table}
+\subsection{Dynamische Methode}
+Bei der dynamischen Methode wird die Wärmeleitfähigkeit aus der Ausbreitungsgeschwindigkeit der Temperaturwelle bestimmt.
+Die Stäbe werden in einer Periode $T_{P1} = 80 s $ geheizt und abgekühlt.
+Es wird zehn Perioden lang gemessen und die in Tabelle [4] enthaltenen Werte von Abbildung [5] abgelesen.
+Mit diesen Werten wird die Wärmeleitfähigkeit $\kappa_{Messing}$ berechnet.
+Die Wärmeleitfähigkeit $\kappa_{Aluminium}$ wird ebenfalls berechnet mit den Werten aus Tabelle[5], die in Abbildung [6] abgelesen werden.
+Für Edelstahl werden die gleichen Größen gemessen und berechnet, jedoch wird der Stab dabei in einer Periode von $T_{P2} = 200 s$ geheizt und gekühlt.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{80secdyn12Messing.pdf}
+  \caption{Temperaturwellen Messing, 80 s Periodendauer}
+  \label{fig:5}
+\end{figure}
+\begin{table}[H]
+  \centering
+  \caption{Berechnung von $\kappa_{Messing}$}
+  \label{tab:4}
+  \begin{tabular}{c c c c c}
+    \toprule
+   Periode &   $A_{nah,T1}$ in K &  $A_{fern,T2}$ in K &  $\Delta t$ in s & $\kappa$ in $\frac{W}{mK}$ \\
+    \midrule
+    1 & 4 & 0,6 & 8 & 97,26 \\
+    2 & 4,5 & 0,8 & 10 & 85,46 \\
+    3 & 4,8 & 1,5 & 10 & 126,90 \\
+    4 & 4,8 & 1,1 & 11 & 91,08 \\
+    5 & 5 & 1,2 & 11 & 94,03 \\
+    6 & 5,1 & 1,2 & 12 & 85,01 \\
+    7 & 5 & 1,4 & 12 & 96,63 \\
+    8 & 4,9 & 1,2 & 12 & 87,43 \\
+    9 & 4,9 & 1,2 & 13 & 80,71 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+Die Werte für $\kappa $ werden mit Python gemittelt und die Standardabweichung berechnet. $$\kappa_{Messing} =(93.834 \pm 12.831) \frac{W}{mK}$$
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{80secdyn56Alu.pdf}
+  \caption{Temperaturwellen Aluminium, 80 s Periodendauer}
+  \label{fig:6}
+\end{figure}
+\begin{table}[H]
+  \centering
+  \caption{Berechnung von $\kappa_{Aluminium}$}
+  \label{tab:5}
+  \begin{tabular}{c c c c c}
+    \toprule
+   Periode &   $A_{nah,T6}$ in K &  $A_{fern,T5}$ in K &  $\Delta t$ in s & $\kappa$ in $\frac{W}{mK}$ \\
+    \midrule
+    1 & 3,6 & 1,3 & 7 & 146,68 \\
+    2 & 4,2 & 2 & 7 & 201,36 \\
+    3 & 4,7 & 2,3 & 8 & 189,92\\
+    4 & 4,8 & 2,6 & 10 & 170,57\\
+    5 & 5,1 & 2,5 & 9 & 162,98 \\
+    6 & 5 & 2,5 & 9 & 167,64 \\
+    7 & 4,9 & 2,9 & 10 & 199,38 \\
+    8 & 5 & 2,7 & 9 & 188,58 \\
+    9 & 5,1 & 2,9 & 9 & 205,84 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+$$\kappa_{Aluminium} =(181.439 \pm 19.133) \frac{W}{mK}$$
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{200secdyn78Edelstahl.pdf}
+  \caption{Temperaturwellen Edelstahl, 200 s Periodendauer}
+  \label{fig:7}
+\end{figure}
+\begin{table}[H]
+  \centering
+  \caption{Berechnung von $\kappa_{Edelstahl}$}
+  \label{tab:6}
+  \begin{tabular}{c c c c c}
+    \toprule
+   Periode &   $A_{nah,T7}$ in K &  $A_{fern,T8}$ in K &  $\Delta t$ in s & $\kappa$ in $\frac{W}{mK}$ \\
+    \midrule
+    1 & 9,5 & 0,5 & 45 & 10,87 \\
+    2 & 10,5 & 0,5 & 45 & 10,51 \\
+    3 & 11 & 1 & 45 & 13,35\\
+    4 & 12 & 1 & 48 & 12,07\\
+    5 & 13 & 1,5 & 48 & 13,89 \\
+    6 & 13 & 1,5 & 48 & 13,89 \\
+    7 & 13 & 2 & 50 & 15,39 \\
+    8 & 13 & 2 & 50 & 15,39 \\
+    9 & 13 & 2 & 50 & 15,39 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+$$\kappa_{Edelstahl} =(13.417 \pm 1.791) \frac{W}{mK}$$
+Mit den berechneten Werten für $\kappa$ können die Wellenlängen und die Frequenzen der Temperaturwellen über folgende Formeln bestimmt werden.
+\begin{align*}
+\lambda &= \sqrt{ \frac{4 \pi \kappa T}{\rho c}}\\
+f &= \frac{1}{T}
+\end{align*}
+Da $\kappa$ durch gewisse Messunsicherheiten eine fehlerbehaftete Größe ist, muss zur Wellenlänge $\lambda$ ein Fehler $\Delta \lambda$ mithilfe der Gaußschen Fehlerfortpflanzung berechnet werden.
+$$\Delta \lambda = \sqrt{\Bigl(\frac{2 \pi T}{\rho c} \cdot \Bigl(\frac{4 \pi \kappa T}{\rho c}\Bigr)^{-\frac{1}{2}}\Bigr)^2 \cdot \Delta \kappa^2} $$
+Es werden folgende Wellenlängen und Frequenzen berechnet.
+\begin{align*}
+  \lambda_{Messing} &= (0,170 \pm 0,012 )\ \text{m}\\
+  f_{Messing} &= 0,0125 \ \text{Hz}\\
+  \lambda_{Aluminium} &= (0,280 \pm 0,015 ) \ \text{m}\\
+  f_{Aluminium} &= 0,0125 \ \text{Hz}\\
+  \lambda_{Edelstahl} &= (0,103 \pm 0,0069 ) \ \text{m}\\
+  f_{Edelstahl} &= 0,005 \  \text{Hz}
+\end{align*}
+
+
+

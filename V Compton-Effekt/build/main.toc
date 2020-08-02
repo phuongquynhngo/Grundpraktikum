@@ -1,0 +1,11 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {ngerman}{}
+\contentsline {section}{\numberline {1}Ziel des Versuches}{3}{section.1}%
+\contentsline {section}{\numberline {2}Theorie}{3}{section.2}%
+\contentsline {section}{\numberline {3}Durchführung}{5}{section.3}%
+\contentsline {section}{\numberline {4}Auswertung}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Aufnahme eines Emissionspektrums der Kupfer Röntgenröhre}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Bestimmung der Transmission als Funktion der Wellenlänge}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Bestimmung der Compton-Wellenlänge}{10}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Diskussion}{11}{section.5}%
+\contentsline {section}{\nonumberline Literatur}{12}{section*.23}%

@@ -1,0 +1,125 @@
+\section{Diskussion}
+\label{sec:Diskussion}
+Die Abweichungen werden im folgenden mit der Formel
+\begin{equation}
+    \text{Abweichung $f$} = \Big\vert\frac{\text{Berechnete Werte} - \text{Literaturwerte}}{\text{Berechnete Werte}}\Big\vert \cdot 100 \%
+\end{equation} berechnet.\\
+Bei dem Versuch wurden folgende Einflüsse (systemmatische Fehler) nicht berücksichtigt:
+\begin{enumerate}
+    \item Ablesefehler bei Messgeräten
+    \item Röntgenröhre falsch eingestellt
+    \item Fehler in den Messgeräten bzw. Messmitteln
+    \item Schwankungen der Netzspannung
+    \item Ablesefehler von Grafiken
+\end{enumerate}
+
+\subsection{Überprüfung der Bragg-Bedingung}
+Zur Überprüfung der Bragg-Bedingung beträgt der Winkel des Maximums den Wert von $\theta_\text{GM}=28,2\,\mathrm{°}$.
+Es ergibt sich eine Abweichung $f_{\theta_\text{GM}}$ zum theoretischen Wert $\theta_\text{GM,theorie}=2\theta=28\,\mathrm{°}$ von 0,79\%. 
+Somit ist die Bragg-Bedingung erfüllt.\\
+
+\subsection{Analyse eines Emissionsspektrums der Kupfer-Röntgenröhre}
+In Tabelle \ref{tab:Cuwerte} sind die Werte und deren mit der Gleichung (21) berechneten Abweichung $f$ zu den theoretischen Werte \cite{XT} von der Cu-$K_\alpha-$und Cu-$K_\beta-$Linie bei der Verwendung eines LiF-Kristalls \(d=204,1\, \mathrm{pm}\).
+\begin{table}[H]
+    \centering
+    \caption{Werte für die Cu-$K_\alpha-$und Cu-$K_\beta-$Linie.}
+    \label{tab:Cuwerte}
+    \begin{tabular}{|l  ||c|c|c ||c|c|c| }
+        \toprule
+        {} &  $E{_K ^\text{Lit}}/\mathrm{keV} $ & $E{_K}/\mathrm{keV} $   & $f_{E_K}/\mathrm{\%}$ &     $\theta^\text{Lit}/\mathrm{°}$    &    $\theta/\mathrm{°}$  &  $f_{\theta}/\mathrm{\%}$ \\
+        \midrule
+        $K_{\alpha }$ &8,048&8,059&0,316&22,53&22,5&0,133\\
+        $K_{\beta}$&8,905&8,931&0,291&20,26&20,2&0,297\\
+        \bottomrule
+        \end{tabular}
+\end{table}
+Die Werte der Halbwertsbreite (Full Width at Half Maximum) für die Cu-$K_\alpha-$ und Cu-$K_\beta-$Linie sind:\\
+
+$K_\alpha$-Linie: $\text{FWHM}_\alpha= 0,494 \,\mathrm{°}$, \(\Delta E_{\text{FWHM},\alpha}=166,231\,\mathrm{eV}\)\\
+
+$K_\beta$-Linie: $\text{FWHM}_\beta= 0,495 \,\mathrm{°}$, \(\Delta E_{\text{FWHM},\beta}=207,488\,\mathrm{eV}\)\\
+
+Das Auflösungsvermögen der Apparatur beider Linien lauten
+\begin{align*}
+    A_\alpha &= 48,481\\
+    A_\beta &= 43,043.\\
+  \end{align*}
+
+Die Energiedifferenz zwischen die $K_\alpha$- und $K_\beta$-Linie beträgt 
+  \begin{align*}
+      \Delta E  = 872\, \mathrm{eV}.
+    \end{align*}
+Die Abschirmkonstanten $\sigma_1$, $\sigma_2$, $\sigma_3$ für Kupfer und deren Abweichungen mit den theoretischen Werten sind in Tabelle \ref{tab:Kupferab} gegeben.
+
+\begin{table}[H]
+    \centering
+    \caption{Abschirmkonstanten für Kupfer.}
+    \label{tab:Kupferab}
+    \begin{tabular}{|l  ||c|c|c| }
+        \hline
+        {}&$\sigma_{1,\text{theorie}}$&{}&{}\\
+        \hline
+        $\text{Für}\,\, E{^\text{Lit}_{K,\text{abs}}}$&3,299&{}&{} \\
+        \hline
+        \hline
+        {}&$\sigma_{2,{\text{theorie}}}$&$\sigma_2$&$f_{\sigma_2}/\mathrm{\%}$\\
+        \hline
+        $\text{Für}\,\, E_{K,\alpha }$ &12,382&12,480&0,785\\
+        \hline
+        \hline
+        {}&$\sigma_{3,{\text{theorie}}}$&$\sigma_3$&$f_{\sigma_3}/\mathrm{\%}$\\
+        \hline
+        $\text{Für}\,\, E_{K,\beta }$&21,621&22,896&5,569\\
+        \hline
+        \end{tabular}
+\end{table}
+\subsection{Anaylse der Absorptionsspektren}
+Tabelle \ref{tab:Absorber} zeigt die ermittelten und die Literaturwerte \cite{XT} der unterschiedlichen Absorptionspektren. 
+Tabelle \ref{tab:Abweichungabsorber} zeigt die relativen Abweichungen, die sich mit der Gleichung (21) berechnet werden.
+\begin{table}[H]
+    \centering
+    \caption{Werte für die Absorber.}
+    \label{tab:Absorber}
+    \begin{tabular}{|l ||c|c || c|c || c|c| }
+        \toprule
+        {}  &$E{^{\text{Lit}}_K}/\mathrm{keV} $ & $E{_K}/\mathrm{keV} $   & $\theta{^{\text{Lit}}_K}/\mathrm{°}$  & $\theta{_K}/\mathrm{°}$  & $\sigma{^{\text{Lit}}_K}$ & $\sigma{_K}$ \\
+        \midrule
+        $\text{Zn}$&9,669&9,619&18,6&18,7&3,545&3,615\\
+        $\text{Ga}$&10,378&10,284&17,29&17,45&3,605&3,731\\
+        $\text{Br}$&13,484&13,455&13,22&13,25&3,838&3,872\\
+        $\text{Rb}$&15,208&15,144&11,70&11,75&3,942&4,014\\
+        $\text{Sr}$&16,115&15,947&11,03&11,15&3,990&4,172\\
+        $\text{Zr}$&18,008&17,848&9,86&9,95&4,091&4,255\\
+        \bottomrule
+        \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Relative Abweichung.}
+    \label{tab:Abweichungabsorber}
+    \begin{tabular}{|l|c|c|c|c|}
+        \toprule
+        {} &$f_{E_K}/\mathrm{\%}$ &$f_{\theta_K}/\mathrm{\%}$ &$f_{\sigma_K}/\mathrm{\%}$  \\
+        \midrule
+        $\text{Zn}$&0,520&0,535&1,936\\
+        $\text{Ga}$&0,914&0,917&3,377\\
+        $\text{Br}$&0,216&0,226&0,878\\
+        $\text{Rb}$&0,423&0,426&1,769\\
+        $\text{Sr}$&1,053&0,011&4,362\\
+        $\text{Zr}$&0,896&0,905&3,854\\
+
+        \bottomrule
+        \end{tabular}
+\end{table}
+
+
+Der experimentelle Wert der Rydbergfrequenz beträgt \(R =(3,0598 \pm 0,0349) \cdot 10^{15}\,\mathrm{Hz}\).
+Der Theoriewert  von der Rydbergfrequenz lautet \(R =3,2898 \cdot 10^{15}\,\mathrm{Hz}\) \cite{RB}.
+Für die relative Abweichung ergibt sich 7,517\%. 
+
+Der experimentelle Wert der Rydbergenergie beträgt \(R_{\infty} =(12,671 \pm 0,1445)\,\mathrm{eV}\).
+Der Theoriewert  von der Rydbergenergie lautet \(R_{\infty} =13,606\,\mathrm{eV}\) \cite{RB}.
+Für die relative Abweichung ergibt sich 7,376\%. 
+
+Die Abweichungen betragen gro{\ss}e Werte, weil es nur sechs Werte für die Ausgleichsrechnung zur Bestimmung der Rydbergkonstante genutzt wurden.

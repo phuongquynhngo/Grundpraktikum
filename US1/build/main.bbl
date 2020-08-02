@@ -1,0 +1,72 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{1}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3e15bac3a33576849af567ed2ba5848d}{%
+           family={Schulte},
+           familyi={S\bibinitperiod},
+           given={As­sis­ten­tin\bibnamedelima Nicole},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \strng{namehash}{3e15bac3a33576849af567ed2ba5848d}
+      \strng{fullhash}{3e15bac3a33576849af567ed2ba5848d}
+      \strng{bibnamehash}{3e15bac3a33576849af567ed2ba5848d}
+      \strng{authorbibnamehash}{3e15bac3a33576849af567ed2ba5848d}
+      \strng{authornamehash}{3e15bac3a33576849af567ed2ba5848d}
+      \strng{authorfullhash}{3e15bac3a33576849af567ed2ba5848d}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Eingenomen am 30.06.2020}
+      \field{title}{Die Messdaten zur Schallgeschwindigkeitsbestimmung mit dem Durchschaltungs-Verfahren}
+    \endentry
+    \entry{AL}{misc}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labeltitlesource}{title}
+      \field{note}{Eingesehen am 28.06.2020}
+      \field{title}{Grundlagen der Ultraschalltechnik}
+      \verb{urlraw}
+      \verb https://moodle.tu-dortmund.de/pluginfile.php/1138348/mod_resource/content/2/V901.pdf
+      \endverb
+      \verb{url}
+      \verb https://moodle.tu-dortmund.de/pluginfile.php/1138348/mod_resource/content/2/V901.pdf
+      \endverb
+    \endentry
+    \entry{s}{misc}{}
+      \field{sortinit}{s}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labeltitlesource}{title}
+      \field{note}{Eingesehen am 05.07.2020}
+      \field{title}{Schallgeschwindigkeiten im Material}
+      \verb{urlraw}
+      \verb https://www.olympus-ims.com/de/ndt-tutorials/thickness-gage/appendices-velocities/
+      \endverb
+      \verb{url}
+      \verb https://www.olympus-ims.com/de/ndt-tutorials/thickness-gage/appendices-velocities/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,15 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {ngerman}{}
+\contentsline {section}{\numberline {1}Zielsetzung}{3}{section.1}%
+\contentsline {section}{\numberline {2}Theorie}{3}{section.2}%
+\contentsline {subsubsection}{\numberline {2.0.1}Die Austrittsarbeit der Leitungselektronen}{3}{subsubsection.2.0.1}%
+\contentsline {subsubsection}{\numberline {2.0.2}Die Sättigungsstromdichte der thermischen Elektronenemission}{4}{subsubsection.2.0.2}%
+\contentsline {subsubsection}{\numberline {2.0.3}Die Hochvakuum-Diode}{4}{subsubsection.2.0.3}%
+\contentsline {subsubsection}{\numberline {2.0.4}Raumladung und das Langmuir-Schottkysche Raumladungsgesetz}{5}{subsubsection.2.0.4}%
+\contentsline {subsubsection}{\numberline {2.0.5}Anlaufstromgebiet}{5}{subsubsection.2.0.5}%
+\contentsline {section}{\numberline {3}Durchführung}{6}{section.3}%
+\contentsline {subsubsection}{\numberline {3.0.1}Bestimmung der Kennlinie}{6}{subsubsection.3.0.1}%
+\contentsline {subsubsection}{\numberline {3.0.2}Bestimmung der Anlaufstromkurve}{6}{subsubsection.3.0.2}%
+\contentsline {section}{\numberline {4}Auswertung}{6}{section.4}%
+\contentsline {section}{\numberline {5}Diskussion}{8}{section.5}%
+\contentsline {section}{\nonumberline Literatur}{8}{section*.8}%

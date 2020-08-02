@@ -1,0 +1,748 @@
+\documentclass[a4paper, 10pt]{report}%%{scrartcl} %%Das Deutsche Layout f�r article
+
+\usepackage{ngerman}            %% Benutze Deutsche Trennregeln
+\usepackage[normalem]{ulem}
+\usepackage[intlimits]{amsmath} %% Erweiterte Matheumgebung
+\usepackage{amssymb}            %% Ereiterte  Mathezeichens�tze
+%%\usepackage{wasysym,oldgerm,bbm,enumerate}
+\usepackage{color}              %% Erm�glicht die nutzung von Farbigem Text
+\usepackage[ansinew]{inputenc}  %% Erm�glicht die eingage von Umlauten und des �
+\usepackage{fancyhdr}           %%
+\usepackage{lastpage}
+\usepackage[final]{graphicx}    %% Erm�glicht die Einbindung von Grafiken. Optionen: draft <> final
+\usepackage[bookmarksnumbered]{hyperref}     %% Erm�glicht Hyperlinks
+%%\usepackage{wrapfig}            %% Erm�glicht den Umfluss von Text um Grafiken
+\usepackage{units}              %% Setzt SI Einheiten korrekt
+\usepackage[T1,OT1]{fontenc}
+\usepackage{multicol}
+\usepackage[german]{varioref}
+\usepackage{tabularx}
+\usepackage[ngerman]{babel}
+\usepackage{fancybox}
+\usepackage[squaren]{SIunits}
+\usepackage{theorem}
+\usepackage{geometry}
+\usepackage{relsize}
+\usepackage{graphicx}
+\author{Sebastian Rollke (103095) \,\, und Daniel Brenner (105292)}
+\title{Physik III - Anf�ngerpraktikum- Versuch 500}
+\begin{document}
+	\maketitle
+	\tableofcontents
+
+\chapter{Einleitung}
+Der Photoelektrische Effekt (oder kurz Photoeffekt) bzw. Einsteins Interpretation im fr�hen 20. Jahrhundert f�hrte neben einigen anderen dazu, dass die bis dahin geltende klassische Betrachtung des Lichtes als elektromagnetische Welle revidiert werden musste. Die Beobachtungen dieses Versuches f�hren zu dem heutzutage g�ltigen Modell des \textit{Welle-Teilchen-Dualismus} des Lichtes.\\
+Man unterscheidet dabei zwischen zwei Formen des Photoeffektes:
+\begin{itemize}
+	\item dem \textit{"inneren" Photoelektrischen Effekt}, bei dem Elektronen durch Lichteinstrahlung aus dem Valenzband eines Festk�rpers in das Leitungsband "gehoben" werden und somit eine Verbesserung der Leitf�higkeit bei Lichteinstrahlung erreicht wird.
+	\item dem \textit{"�u�eren" Photoelektrischen Effekt}, bei dem Elektronen durch Lichteinstrahlung von den Atomen eines Festk�rpers gel�st werden.
+\end{itemize}
+Wir beschr�nken uns dabei im folgenden auf den �u�eren Photoelektrischen Effekt.
+\section{Zielsetzung}
+Bei diesem Versuch soll nun bestimmt werden, welche (materialabh�ngige) Energie n�tig ist um Elektronen vom Atom zu l�sen (\textit{Austrittsarbeit $W_A$}) zudem soll das Verh�ltnis zwischen Elementarladung und \textit{Plank'schem Wirkungsquantum} bestimmt werden.\\
+
+\chapter{Theoretische Betrachtung}
+Die experimentellen Beobachtungen die man beim (�u�eren) Photoeffekt macht, stimmen nicht mit denen nach der klassischen Betrachtung zu erwartenden �berein. Diese werden nun im folgenden genauer betrachtet und es werden die Schritte dargelegt, die zu der \textit{Korpuskulartheorie des Lichtes} f�hrten.
+
+\section{Klassische Erkl�rung des Photoeffektes}
+Klassisch kann man den Photoeffekt durch die Annahme erkl�ren, dass die Elektronen durch die einfallende elektromagnetische Welle zu Schwingungen angeregt werden. Dabei wird pro Zeiteinheit eine gewisse Energie auf das Elektron �bertragen. Die Schwingungsamplitude (und somit Energie) der Elektronen wird dadurch immer gr��er, bis sie irgendwann ausreicht um sich aus dem Atom zu l�sen.\\
+Dementsprechend m�ssten die Energien der Elektronen abh�ngig von der Lichtintensit�t sein und man m�sste auch bestimmte Resonanzfrequenzen beobachten bei denen der Photoeffekt besonders gut auftritt.
+
+\section{Widerspr�che bei der klassischen Betrachtung des Photoeffektes}
+Betrachtet man das Licht als elektromagnetische Welle m�ssten, egal bei welcher Wellenl�nge $\lambda$ die Bestrahlung erfolgt, Elektronen austreten, solange man nur lange genug abwartet bis die Welle (deren Energie homogen verteilt ist) eine Energie $E \geq W_A$ auf das Metall �bertragen hat.\\
+Die Beobachtungen die man macht stehen jedoch im Widerspruch zu diesen Annahmen
+\begin{enumerate}
+ \item Elektronen treten erst unterhalb einer bestimmten Lichtwellenl�nge $\lambda_gr$ aus. Der Austritt geschieht dabei instantan.
+ \item Die Energie eines ausgetretenen Elektrons h�ngt nur von der Wellenl�nge des Lichtes und nicht von der Intensit�t ab.
+ \item Die Anzahl der ausgetretenen Elektronen (der \textit{Photostrom}) ist abh�ngig von der Intensit�t
+\end{enumerate}
+Eine Erkl�rung diese Ph�nomene liefert dabei die Annahme, das das Licht auch als Teilchen (\textit{Photonen}) betrachtet werden muss, die jeweils eine genau definierte Energiemenge
+\begin{equation}
+E_{Ph} = h \cdot \nu
+\end{equation}
+besitzen. Die Frequenz $\nu$, Wellenl�nge $\lambda$ und Ausbreitungsgeschwindigkeit $c$ sind dabei �ber die Beziehung
+\begin{equation}
+\lambda = c \cdot \nu \Rightarrow \nu = \frac{\lambda}{c}
+\end{equation}
+mit einander verkn�pft.\\
+Das in Gleichung (1) auftretende $h$ ist dabei das \textit{Planck'sche Wirkungsquantum}, der Proportionalit�tsfaktor zwischen Energie und Frequenz des Photons.\\
+Bei dieser Teilchentheorie des Lichtes kann man den Photoeffekt als Sto� eines Photons mit einem Elektron auffassen, das dadurch seine Energie an das Elementarteilchen �bergibt. Wichtig ist dabei, das das Photon (zumindest beim Photoeffekt) immer nur seine gesamt Energie abgeben kann (inelastischer Sto�) und es somit vernichtet wird.\\
+Somit kann ein Elektron immer nur die durch (1) definierte Energie aufnehmen. Somit ist leicht ersichtlich wieso eine Grenzwellenl�nge existiert ab der erst der Photoeffekt auftritt. Denn ist die Energie geringer als die Austrittsarbeit reicht sie schlichtweg nicht aus um das Elektron aus dem Festk�rper zu l�sen.\\
+Auch die Intensit�tsabh�ngigkeit des \textit{Photostroms} l�sst sich somit erkl�ren, da bei h�herer Intensit�t mehr Photonen auf die Oberfl�che treffen und entsprechend mehr Elektronen ausgel�st werden.\\
+\section{Der Dualismus Welle-Teilchen}
+So exakt diese \textit{Korpuskluartheorie} den Photoeffekt auch beschreibt, so liefert sie jedoch keine Erkl�rung f�r zum Beispiel das auftreten von Beugungsmustern am Spalt oder Interferenzerscheinungen. Diese lassen sich nur durch eine Wellentheorie des Lichtes erkl�ren.\\
+Zusammengefasst kann man sagen, da� das Licht sowohl Teilchen- als auch Welleneigenschaften besitzt. Man beobachtet dabei die Welleneigenschaft vorz�glich dann, wenn man eine gro�e Anzahl Photonen betrachtet �ber die statistisch gemittelt wird.\\
+Die Teilcheneigenschaft beobacht man hingegen bei der Betrachtung einzelner- oder weniger Photonen.\\
+Man bezeichnet dies als \textit{Welle-Teilchen Dualismus des Lichtes}.
+
+\chapter{Experimentelles Vorgehen}
+Um nun Aussagen �ber die kinetische Energie der Elektronen zu treffen, verwendet man die \textit{Gegenfeldmethode}. Man l�st Elektronen aus einer Photokathode mittels Bestrahlung mit monochromatischem Licht aus. Die ausgel�sten Elektronen l�sst man gegen eine Gegenspannung $U_{Br}$ anlaufen, die eine bremsende Wirkung auf sie aus�bt.\\
+Man justiert ein Gegenspannung nun auf einen Wert $U_g$, bei dem gerade keine Elektroden mehr an der Kathode ankommen (der Photostrom also verschwindet). Somit haben die Elektronen genau ihre kinetische Energie in potentielle umgewandelt und es gilt
+\begin{equation}
+h \cdot \nu = U_{g} \cdot e_0 + W_A
+\end{equation}
+mit der Elementarladung $e_0$.\\
+Man beobachtet jedoch auch Abweichungen von dieser (idealisierten) Betrachtung, da die Festk�rperelektronen nicht allesamt die gleiche Energie besitzen, sondern nach der \textit{Fermi-Dirac-Statistik} bei Zimmertemperatur eine Energieverteilung besitzen aufgrund derer man nicht den abrupten Abfall des Photstroms beobachtet sondern ein asymptotisch gegen Null strebendes Verhalten (vgl. Abbildung 3.1).
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[scale = 0.4]{photostrom}
+	\end{center}
+	\caption{Verhalten des Photstroms}
+	\label{fig:abbildung2}
+\end{figure}
+
+
+
+\section{Aufbau der Photzelle}
+Man verwendet eine so genannte Photozelle f�r den eigentlichen Versuch, in der dann der Photoeffekt abl�uft. Wie Abbildung 3.2 zeigt, besteht die Zelle aus einem evakuierten Glaskolben in dem sich die Kathode befinden um die dann eine ringf�rmige Anode angeordnet ist.
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[scale = 0.4]{photozelle}
+	\end{center}
+	\caption{Photzelle}
+	\label{fig:abbildung2}
+\end{figure}
+Dabei ist entsprechend die Fl�che der Kathode erheblich gr��er als die der Anode um zu verhindern, da� auch aus der Kathode Photoelektronen austreten. Dies unterdr�ckt man zus�tzlich durch die Verwendung eines Materials das eine erheblich h�here Austrittsarbeit als das Kathodenmaterial besitzt.\\
+Gerade dies bedingt jedoch auch einen Nebeneffekt. Denn gilt $A_{Kathode} < h \cdot \nu <  A_{Anode}$ tritt trotz allem kein Photostrom auf, da die Elektronen gegen das Potential der Anode anlaufen und sie nicht erreichen. Um diese Potentialbarriere zu �berwinden, muss entsprechend sogar eine beschleunigende Spannung angelegt werden. Dies ist schematisch in Abbildung 3.3 dargestellt.\\
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[scale = 0.4]{fermi}
+	\end{center}
+	\caption{Schematische Darstellung der Potentiale an Anode und Kathode}
+	\label{fig:abbildung3}
+\end{figure}
+
+\section{Optischer Teil des Versuchsaufbaus}
+Um monochromatisches Licht zur Bestrahlung zu erhalten verwendet man Lampen die verschiedene wohlbekannte Spektrallinien emittieren. In diesem Fall sind dies eine Quecksilber- und eine Thalliumdampflampe.\\
+Um aus dem Licht monochromatisches Licht zu erhalten verwendet man den in Abbildung 3.4 dargstellten Aufbau. Man nutzt hierbei den Dispersionseffekt am Glasprisma um die Spektrallinien r�umlich voneinander zu trennen. 
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[scale = 0.4]{optisch}
+	\end{center}
+	\caption{optischer Aufbau}
+	\label{fig:abbildung4}
+\end{figure}
+
+Die erste Linse wandelt das Licht in einen parallelen Strahlengang, der nachfolgende Spalt dient der Intensit�tsregulierung und die zweite Linse bildet das Licht auf das Glasprisma ab. Diese trennt die Spektrallinien auf und man kann dann mit monochromatischem Licht die Photozelle beleuchten.\\
+Die Linsen sind dabei verschiebbar angeordnet, so dass man sie entsprechend ihrer Brennweite so einjustieren kann, dass man eine scharfe Abbildung der Spektrallinien erh�lt. Zudem muss darauf geachtet werden, da� die ausgew�hlte Spektrallinie m�glichst intensiv ist um einen hohen Photostrom zu erzielen, der sich dann leichter nachzuweisen l�sst.\\
+Weiterhin verwendet man f�r die rote Spektrallinie eine rote Leuchtdiode. Da diese nat�rlich bereits monochromatisches Licht aussendet entf�llt hierbei der optische Aufbau.
+\section{Versuchsaufbau}
+Die bereits vorgestellten Komponenten kombiniert man nun miteinander und erh�lt dann den Gesamtaufbau des Versuches (vgl. Abbildung 3.5)
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[scale = 0.4]{aufbau}
+	\end{center}
+	\caption{Versuchsaufbau}
+	\label{fig:abbildung1}
+\end{figure}
+Wichtig ist die Verwendung eines hochempfindlichen Strommessger�tes (wie in diesem Fall eines Picoamperemeters) um den geringen Photostrom �berhaupt quantitativ erfassen zu k�nnen.
+
+\chapter{Auswertung}
+\section{Bestimmung der Gegenspannungen}
+
+Zur Bestimmung der Gegenspannung wird zun�chst die Wurzel des gemessenen Photostroms gegen die jeweilige angelegte Spannung aufgetragen. In dem Bereich des linearen Kurvenverlaufs wird nun nach der Methode der kleinsten Fehlerquadrate eine Ausgleichsrechnung durch das Programm "OpenOffice" durchgef�hrt. Die Ausgleichsrechnung liefert eine Gerade der Art
+
+\begin{eqnarray}
+\sqrt{I} = A + mU
+\end{eqnarray}
+
+wobei A der Schnittpunkt mit der I-Achse und m die Steigung der Ausgleichsgeraden ist. Der Schnittpunkt dieser linearen Ausgleichsgeraden mit der U-Achse stellt nun den gesuchten Wert f�r $U_g$ dar. Er berechnet sich nach
+
+\begin{eqnarray}
+U_g = \frac{-A}{m}
+\end{eqnarray}
+
+Der absolute Fehler der Gegenspannung berechnet sich nun nach:
+
+\begin{eqnarray}
+s_{U,abs} = U_g \sqrt{\left(\frac{s_{A,abs}}{A}\right)^2 + \left(\frac{s_{m,abs}}{m}\right)^2}
+\end{eqnarray}
+
+wobei die absoluten Fehler der Steigung ($s_{m,abs}$) und des Achsenabschnitts ($s_{A,abs}$) jeweils aus der Ausgabe der Regression folgen. 
+\newpage
+\subsection{365,5nm Quecksilber-Lampe}
+
+\begin{figure}[!htbp]
+\begin{minipage}[t]{2cm}
+\vspace{0pt}
+\centering
+\begin{center}
+\begin{tabular}{c|c}
+U [V] & I [nA] \\
+\hline
+-1,683&	0,000 \\
+-1,650&	0,001 \\
+-1,600&	0,002 \\
+-1,550&	0,004 \\
+-1,500&	0,005 \\
+-1,450&	0,007 \\
+-1,400&	0,010 \\
+-1,350&	0,012 \\
+-1,300&	0,016 \\
+-1,250&	0,020 \\
+-1,200&	0,026 \\
+-1,150&	0,032 \\
+-1,100&	0,038 \\
+-1,050&	0,046 \\
+-1,000&	0,056 \\
+-0,900&	0,076 \\
+-0,800&	0,105 \\
+-0,700&	0,130 \\
+-0,600&	0,160 \\
+-0,500&	0,195 \\
+-0,400&	0,230 \\
+-0,300&	0,270 \\
+-0,200&	0,300 \\
+-0,100&	0,340 \\
+0,000&	0,380 \\
+0,250&	0,480 \\
+0,500&	0,580 \\
+0,750&	0,680 \\
+1,000&	0,800
+\end{tabular}
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{12cm}
+\vspace{0pt}
+\includegraphics[scale = 0.6]{HG366}
+\caption{Wurzel I gegen U mit eingezeichneter Ausgleichsgeraden f�r $\lambda$ = 365,5nm}
+\begin{center}
+\begin{tabular}{c|c|c}
+Steigung m & Achsenabschnitt A & $U_g$ [V]\\
+\hline
+0,389 $\pm$ 0,004 & 0,628 $\pm$	0,003 & -1,615 $\pm$ -0,018
+\end{tabular}
+\end{center}
+\end{minipage}
+\end{figure}
+	
+
+\newpage
+\subsection{377,6nm Thallium-Lampe}
+\begin{figure}[!htbp]
+\begin{minipage}[t]{2cm}
+\vspace{0pt}
+\centering
+\begin{center}
+\begin{tabular}{c|c}
+U [V] & I [nA] \\
+\hline
+-1,450&	0,000\\
+-1,400&	0,000\\
+-1,350&	0,000\\
+-1,300&	0,001\\
+-1,250&	0,002\\
+-1,200&	0,002\\
+-1,150&	0,002\\
+-1,100&	0,002\\
+-1,050&	0,003\\
+-1,000&	0,004\\
+-0,950&	0,005\\
+-0,900&	0,006\\
+-0,850&	0,006\\
+-0,800&	0,008\\
+-0,750&	0,009\\
+-0,700&	0,010\\
+-0,650&	0,012\\
+-0,550&	0,014\\
+-0,500&	0,016\\
+-0,450&	0,018\\
+-0,400&	0,020\\
+-0,350&	0,022\\
+-0,300&	0,024\\
+-0,250&	0,025\\
+-0,200&	0,026\\
+-0,150&	0,028\\
+-0,100&	0,030\\
+-0,050&	0,032\\
+0,000&	0,034\\
+0,100&	0,040\\
+0,200&	0,044\\
+0,300&	0,048\\
+0,400&	0,053\\
+0,500&	0,058\\
+0,600&	0,062\\
+0,700&	0,066\\
+0,800&	0,070\\
+0,900&	0,076\\
+1,000&	0,082\end{tabular}
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{12cm}
+\vspace{0pt}
+\includegraphics[scale = 0.6]{th377}
+\caption{Wurzel I gegen U mit eingezeichneter Ausgleichsgeraden f�r $\lambda$ = 377,6nm}
+\begin{center}
+\begin{tabular}{c|c|c}
+Steigung m & Achsenabschnitt A & $U_g$ [V]\\
+\hline
+0,130 $\pm$ 0,002 & 0,192 $\pm$	0,002 & -1,479 $\pm$	-0,027
+\end{tabular}
+\end{center}
+\end{minipage}
+\end{figure}
+
+
+\newpage
+\subsection{405nm Quecksilber-Lampe}
+\begin{figure}[!htbp]
+\begin{minipage}[t]{2cm}
+\vspace{0pt}
+\centering
+\begin{center}
+\begin{tabular}{c|c}
+U [V] & I [nA] \\
+\hline
+-1,333&	0,000 \\
+-1,315&	0,001 \\
+-1,300&	0,001 \\
+-1,275&	0,002 \\
+-1,250&	0,002 \\
+-1,200&	0,004 \\
+-1,150&	0,006 \\
+-1,100&	0,008 \\
+-1,050&	0,010 \\
+-1,000&	0,014 \\
+-0,950&	0,018 \\
+-0,900&	0,024 \\
+-0,850&	0,030 \\
+-0,800&	0,038 \\
+-0,750&	0,047 \\
+-0,700&	0,057 \\
+-0,650&	0,068 \\
+-0,600&	0,082 \\
+-0,550&	0,094 \\
+-0,500&	0,120 \\
+-0,450&	0,125 \\
+-0,400&	0,140 \\
+-0,300&	0,175 \\
+-0,200&	0,205 \\
+-0,100&	0,245 \\
+0,000&	0,280 \\
+0,250&	0,370 \\
+0,500&	0,470 \\
+0,750&	0,570 \\
+1,000&	0,660
+\end{tabular}
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{12cm}
+\vspace{0pt}
+\includegraphics[scale = 0.6]{HG405}
+\caption{Wurzel I gegen U mit eingezeichneter Ausgleichsgeraden f�r $\lambda$ = 405nm}
+\begin{center}
+\begin{tabular}{c|c|c}
+Steigung m & Achsenabschnitt A & $U_g$ [V]\\
+\hline
+0,427 $\pm$ 0,006 & 0,540 $\pm$	0,004 & -1,267 $\pm$ -0,020
+\end{tabular}
+\end{center}
+\end{minipage}
+\end{figure}
+
+
+\newpage
+\subsection{435nm Quecksilber-Lampe}
+\begin{figure}[!htbp]
+\begin{minipage}[t]{2cm}
+\vspace{0pt}
+\centering
+\begin{center}
+\begin{tabular}{c|c}
+U [V] & I [nA] \\
+\hline
+-1,120&	0,000 \\
+-1,110&	0,001 \\
+-1,100&	0,002 \\
+-1,075&	0,003 \\
+-1,050&	0,004 \\
+-1,000&	0,008 \\
+-0,950&	0,014 \\
+-0,900&	0,022 \\
+-0,850&	0,030 \\
+-0,800&	0,042 \\
+-0,750&	0,056 \\
+-0,700&	0,076 \\
+-0,600&	0,125 \\
+-0,500&	0,190 \\
+-0,400&	0,265 \\
+-0,300&	0,340 \\
+-0,200&	0,440 \\
+-0,100&	0,520 \\
+0,000 &	0,620 \\
+0,100 &	0,720 \\
+0,200 &	0,820 \\
+0,300 &	0,920 \\
+0,400 &	1,000 \\
+0,600 &	1,200 \\
+0,800 &	1,400 \\
+1,000 &	1,550
+\end{tabular}
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{12cm}
+\vspace{0pt}
+\includegraphics[scale = 0.6]{HG435}
+\caption{Wurzel I gegen U mit eingezeichneter Ausgleichsgeraden f�r $\lambda$ = 435nm}
+\begin{center}
+\begin{tabular}{c|c|c}
+Steigung m & Achsenabschnitt A & $U_g$ [V]\\
+\hline
+0,743 $\pm$ 0,010 & 0,801 $\pm$	0,005 & -1,078 $\pm$	-0,017
+\end{tabular}
+\end{center}
+\end{minipage}
+\end{figure}
+
+
+\newpage
+\subsection{492nm Quecksilber-Lampe}
+\begin{figure}[!htbp]
+\begin{minipage}[t]{2cm}
+\vspace{0pt}
+\centering
+\begin{center}
+\begin{tabular}{c|c}
+U [V] & I [nA] \\
+\hline
+-1,056&	0,000 \\
+-1,000&	0,000 \\
+-0,950&	0,000 \\
+-0,900&	0,000 \\
+-0,850&	0,000 \\
+-0,700&	0,001 \\
+-0,650&	0,001 \\
+-0,600&	0,002 \\
+-0,550&	0,002 \\
+-0,500&	0,002 \\
+-0,450&	0,003 \\
+-0,400&	0,004 \\
+-0,350&	0,004 \\
+-0,300&	0,005 \\
+-0,250&	0,006 \\
+-0,200&	0,008 \\
+-0,150&	0,008 \\
+-0,100&	0,010 \\
+-0,050&	0,011 \\
+0,000&	0,012 \\
+0,100&	0,014 \\
+0,200&	0,016 \\
+0,300&	0,020 \\
+0,400&	0,022 \\
+0,500&	0,024 \\
+0,600&	0,026 \\
+0,700&	0,028 \\
+0,800&	0,032 \\
+0,900&	0,034 \\
+1,000&	0,036
+\end{tabular}
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{12cm}
+\vspace{0pt}
+\includegraphics[scale = 0.6]{HG492}
+\caption{Wurzel I gegen U mit eingezeichneter Ausgleichsgeraden f�r $\lambda$ = 492nm}
+\begin{center}
+\begin{tabular}{c|c|c}
+Steigung m & Achsenabschnitt A & $U_g$ [V]\\
+\hline
+0,115 $\pm$ 0,004 & 0,108 $\pm$	0,001 & -0,939 $\pm$	-0,032
+\end{tabular}
+\end{center}
+\end{minipage}
+\end{figure}
+
+	
+\newpage
+\subsection{535nm Thallium-Lampe}
+\begin{figure}[!htbp]
+\begin{minipage}[t]{2cm}
+\vspace{0pt}
+\centering
+\begin{center}
+\begin{tabular}{c|c}
+U [V] & I [nA] \\
+\hline
+-0,645&	0,000 \\
+-0,600&	0,000 \\
+-0,550&	0,001 \\
+-0,500&	0,001 \\
+-0,450&	0,002 \\
+-0,400&	0,003 \\
+-0,350&	0,005 \\
+-0,300&	0,008 \\
+-0,200&	0,016 \\
+-0,150&	0,022 \\
+-0,100&	0,026 \\
+-0,050&	0,032 \\
+0,000&	0,040 \\
+0,050&	0,045 \\
+0,100&	0,051 \\
+0,150&	0,057 \\
+0,200&	0,063 \\
+0,250&	0,068 \\
+0,300&	0,074 \\
+0,350&	0,080 \\
+0,400&	0,082 \\
+0,450&	0,090 \\
+0,500&	0,095 \\
+0,600&	0,105 \\
+0,700&	0,110 \\
+0,800&	0,120 \\
+0,900&	0,125 \\
+1,000&	0,135
+\end{tabular}
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{12cm}
+\vspace{0pt}
+\includegraphics[scale = 0.6]{TH535}
+\caption{Wurzel I gegen U mit eingezeichneter Ausgleichsgeraden f�r $\lambda$ = 535nm}
+\begin{center}
+\begin{tabular}{c|c|c}
+Steigung m & Achsenabschnitt A & $U_g$ [V]\\
+\hline
+0,351 $\pm$ 0,006 & 0,196 $\pm$	0,001 & -0,559 $\pm$	-0,010
+\end{tabular}
+\end{center}
+\end{minipage}
+\end{figure}
+	
+
+\newpage
+\subsection{546nm Quecksilber-Lampe}
+\begin{figure}[!htbp]
+\begin{minipage}[t]{2cm}
+\vspace{0pt}
+\centering
+\begin{center}
+\begin{tabular}{c|c}
+U [V] & I [nA] \\
+\hline
+-0,595&	0,000 \\
+-0,500&	0,002 \\
+-0,450&	0,004 \\
+-0,400&	0,008 \\
+-0,350&	0,014 \\
+-0,300&	0,026 \\
+-0,250&	0,044 \\
+-0,200&	0,066 \\
+-0,150&	0,086 \\
+-0,100&	0,130 \\
+-0,050&	0,165 \\
+0,000&	0,200 \\
+0,100&	0,275 \\
+0,200&	0,340 \\
+0,300&	0,420 \\
+0,400&	0,480 \\
+0,500&	0,540 \\
+0,750&	0,660 \\
+1,000&	0,780 \\
+\end{tabular}
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{12cm}
+\vspace{0pt}
+\includegraphics[scale = 0.6]{HG546}
+\caption{Wurzel I gegen U mit eingezeichneter Ausgleichsgeraden f�r $\lambda$ = 546nm}
+\begin{center}
+\begin{tabular}{c|c|c}
+Steigung m & Achsenabschnitt A & $U_g$ [V]\\
+\hline
+0,927 $\pm$ 0,020 & 0,443 $\pm$	0,004 & -0,477 $\pm$	-0,011
+\end{tabular}
+\end{center}
+\end{minipage}
+\end{figure}
+	
+
+\newpage
+\subsection{578nm Quecksilber-Lampe}
+\begin{figure}[!htbp]
+\begin{minipage}[t]{2cm}
+\vspace{0pt}
+\centering
+\begin{center}
+\begin{tabular}{c|c}
+U [V] & I [nA] \\
+\hline
+-19,14&	-0,020 \\
+-12&	-0,020 \\
+-10&	-0,020 \\
+-8&	-0,020 \\
+-6&	-0,020 \\
+-4&	-0,020 \\
+-3&	-0,020 \\
+-2&	-0,020 \\
+-1&	0,000 \\
+-0,9&	0,000 \\
+-0,8&	0,000 \\
+-0,7&	0,000 \\
+-0,66&	0,000 \\
+-0,5&	0,000 \\
+-0,4&	0,002 \\
+-0,3&	0,002 \\
+-0,2&	0,004 \\
+-0,1&	0,012 \\
+0,02&	0,020 \\
+0,1&	0,030 \\
+0,2&	0,042 \\
+0,3&	0,056 \\
+0,4&	0,072 \\
+0,5&	0,086 \\
+0,6&	0,100 \\
+0,7&	0,110 \\
+0,8&	0,125 \\
+0,9&	0,135 \\
+1&	0,150 \\
+1,1&	0,160 \\
+2&	0,220 \\
+3&	0,275 \\
+4&	0,320 \\
+5&	0,340 \\
+7&	0,400 \\
+9&	0,420 \\
+11&	0,440 \\
+15&	0,480 \\
+17&	0,480 \\
+17,5&	0,500 \\
+19&	0,500
+\end{tabular}
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{12cm}
+\vspace{0pt}
+\includegraphics[scale = 0.6]{HG578}
+\caption{Wurzel I gegen U mit eingezeichneter Ausgleichsgeraden f�r $\lambda$ = 578nm}
+\begin{center}
+\begin{tabular}{c|c|c}
+Steigung m & Achsenabschnitt A & $U_g$ [V]\\
+\hline
+0,328 $\pm$ 0,008 & 0,138 $\pm$	0,002 & -1,479 $\pm$	-0,027
+\end{tabular}
+\end{center}
+\end{minipage}
+\end{figure}
+	
+
+\newpage
+\subsection{663nm Diode}
+\begin{figure}[!htbp]
+\begin{minipage}[t]{2cm}
+\vspace{0pt}
+\centering
+\begin{center}
+\begin{tabular}{c|c}
+U [V] & I [nA] \\
+\hline
+-0,230&	0,000 \\
+-0,200&	0,000 \\
+-0,150&	0,001 \\
+-0,100&	0,002 \\
+-0,050&	0,003 \\
+0,000&	0,005 \\
+0,050&	0,008 \\
+0,100&	0,012 \\
+0,150&	0,016 \\
+0,200&	0,020 \\
+0,250&	0,024 \\
+0,300&	0,028 \\
+0,350&	0,032 \\
+0,400&	0,036 \\
+0,450&	0,040 \\
+0,500&	0,043 \\
+0,550&	0,046 \\
+0,600&	0,048 \\
+0,650&	0,050 \\
+0,700&	0,053 \\
+0,750&	0,055 \\
+0,800&	0,057 \\
+0,850&	0,058 \\
+0,900&	0,060 \\
+0,950&	0,062 \\
+1,000&	0,064
+\end{tabular}
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{12cm}
+\vspace{0pt}
+\includegraphics[scale = 0.6]{LED633}
+\caption{Wurzel I gegen U mit eingezeichneter Ausgleichsgeraden f�r $\lambda$ = 663nm}
+\begin{center}
+\begin{tabular}{c|c|c}
+Steigung m & Achsenabschnitt A & $U_g$ [V]\\
+\hline
+0,339 $\pm$ 0,013 & 0,073 $\pm$	0,002 & -0,215 $\pm$	-0,010
+\end{tabular}
+\end{center}
+\end{minipage}
+\end{figure}
+
+\section{Berechnung des Verh�ltnisses h/$e_0$ und der Austrittsarbeit}
+
+Schon an Gleichung 3.1 kann man erkennen, das es einen Zusammenhang zwischen dem Wirkungsquantum, der Lichtfrequenz, der Elektronenladung, der Gegenspannung und der Austrittsarbeit gibt. Somit gilt wenn man diese umstellt:
+
+\begin{equation}
+U_g = \frac{h}{e_0}\cdot \nu - \frac{W_k}{e_0}
+\end{equation}
+
+Die Lichtfrequenz bestimmt sich auf einfache Weise durch $\nu$ = c/$\lambda$. Zur �bersicht nun eine Tabelle aller bisher ermittelten Grenzspannungen und zus�tzlich die umgerechnete Lichtfrequenz:
+
+\begin{center}
+\begin{tabular}{c|c|c}
+$\lambda$ [nm] & $\nu$ [Hz] & $U_g$ [V] \\
+\hline
+578 &5,19 $\cdot 10^{14}$ &-0,421 $\pm$	-0,011 \\
+377,6&7,94 $\cdot 10^{14}$ &-1,479$\pm$	-0,027 \\
+535&5,60 $\cdot 10^{14}$ &-0,559$\pm$	-0,010 \\
+663&4,52 $\cdot 10^{14}$ &-0,215$\pm$	-0,010 \\
+365,5&8,20 $\cdot 10^{14}$ &-1,615$\pm$	-0,018 \\
+405&7,40 $\cdot 10^{14}$ &-1,267$\pm$	-0,020 \\
+435&6,89 $\cdot 10^{14}$ &-1,078$\pm$	-0,017 \\
+492&6,09 $\cdot 10^{14}$ &-0,939$\pm$	-0,032 \\
+546&5,49 $\cdot 10^{14}$ &-0,477$\pm$	-0,011
+\end{tabular}
+\end{center}
+
+Die Gegenspannungen werden nun jeweils gegen die Lichtfrequenz in einem Diagramm aufgetragen. Wiederum wird eine Ausgleichsgerade berechnet, deren Steigung nun das gesuchte Verh�ltnis und der Achsenabschnitt das Verh�ltnis $W_k/e_0$ und somit die Austrittsarbeit in Elektronenvolt liefert. Aus der Regression folgen nun f�r die Gerade nach 4.4 die fehlerbehafteten Werte:
+
+$W_k$ = (1,685 $\pm$ 0,052)eV.
+
+$\frac{h}{e_0}$ = (4,001 $\pm$ 0,072) \cdot $10^{15}$ $\frac{Js}{C}$
+
+Das letzte Verh�ltnis l�sst sich theoretisch auch �ber eine Division des Plank'schen Wirkungsquantums durch die Elementarladung bestimmen, daraus folgt sofort:
+
+\begin{eqnarray}
+\nonumber
+\frac{6,6260755 \cdot 10^{-34}}{1,6021773 \cdot 10^{-19}} = 4,1356693 \cdot 10^{-15}
+\end{eqnarray}
+
+Dies entspricht einer Abweichung von lediglich 3,27\%, diese mag an der geringen Anzahl von Messwerten im linearen Bereich liegen. Bedingt durch die Fermi-Verteilung misst man zwar eine etwas h�here Gegenspannung, dies bewirkt allerdings lediglich eine Verschiebung der Geraden, ihre Steigung und somit das Verh�ltnis sind hiervon nat�rlich nicht beeinflusst. Bedingt durch diesen Effekt verschiebt sich allerdings die Austrittsarbeit ein wenig, doch ist dieser Effekt so klein, das er vernachl�ssigt werden kann gegen den Fehler der Austrittsarbeit. Leider l�sst sich hier kein theoriewert Bestimmen, da nicht bekannt ist, aus welchem Material die Kathode ist. 
+
+\subsection{Deutung des Kurvenverlaufs f�r $\lambda$ = 578 nm}
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[scale = 0.9]{HG578linear}
+	\end{center}
+	\caption{I gegen U f�r $\lambda$ = 578nm}
+	\label{fig:abbildung1}
+\end{figure}
+
+Betrachtet man dem Kurvenverlauf des in Abbildung 4.10 dargestellten Graphen, so sieht man, das er f�r Gro�e Spannungen einen flacher werdenen Verlauf nimmt. Es l�sst sich also eine S�ttigung vermuten, die bedingt dadurch ist, dass nur eine endliche Anzahl von Elektronen auf der Kathode vorhanden ist. Der Photostrom (also die Menge der Elektronen die ausgel�st werden) ist proportional zur Lichtintensit�t und nicht zur Spannung, und kann somit selbst bei sehr hohen Spannungen einen Grenzwert nicht �berschreiten. Die S�ttigung ist erreicht, wenn alle Elektronen der Kathode die Anode erreichen k�nnen. Dieser S�ttigungswert wird allerdings nur asymptotisch erreicht, da auch wenn die Elektronen sich geradlinig Bewegen, sie einer gewissen Streuung unterliegen. Dadurch erreichen nicht alle die gegen�berlegende Anode. Zur verbesserung dieses Aufbaus, m�sste die Lichtquelle ins Innere einer geschlossenen, kugelf�rmigen Anode gebracht werden und dort die ebenfalls im Innern befindliche Kathode bestrahlen. Somit w�rden zwangsl�ufig alle Elektronen auch die Anode erreichen k�nnen, unabh�ngig von ihrer Streuung. 
+
+Weiter kann man sehen, das der Photostrom schon vor dem Erreichen der Gegenspannung beginnt zu sinken. Dies wird mittels der Fermi-Dirac-Statistik erkl�rt, da nicht alle Elektronen die das Licht ausl�st, die gleiche Energie haben. 
+
+Dem Photostrom entgegengerichtet tritt wie festgestellt wurde ein weiterer Strom auf. Dieser ist einfach erkl�rt, da sich auch an der Anode ein lichtelektrischer Effekt ereignet. Bedingt durch die deutlich geringere Oberfl�che der Anode f�llt allerdings dieser Strom viel geringer aus. Theoretisch m�sste gelten, dass die Austrittsarbeit der Anode einen deutlich gr��eren Betrag besitzen m�sste als die der Kathode, da sie zweckm��ig aus einem Material mit gr��erer Bindungsenergie gefertigt ist. Allerdings besteht die Kathode aus einem Material, das bereits bei Raumtemperatur merklich verdampfen kann. Bedingt durch das Vakuum k�nnen sich nun diese verdampften Teilchen an der Anode ablagern und bilden so eine neue Oberfl�che mit geringerer Austrittsarbeit, die wahrscheinlich mit der Zeit sich dem Wert der Kathode n�hert. Schon jetzt ist eine gro�e N�he beider Werte der Grenzspannung leicht zu sehen, auf grund des zu geringen Aufl�sungsverm�gens des Amperemeters l�sst sich allerdings in diesem Bereich nichts n�heres dar�ber feststellen. Die relativ keinen S�ttigungsbetr�ge lassen sich erkl�ren durch die relative gr��e der Kathode zur Anode, wodurch der negative Photostrom schon bei kleinen Lichtintensit�ten die Kathode erreichen k�nnen, ohne eine gro�e Spannung zu ben�tigen. 
+\end{document}
